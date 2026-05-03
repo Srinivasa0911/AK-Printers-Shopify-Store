@@ -30,5 +30,5 @@
 }
 
 h2{
-font-size: var(--ft-h1);
+font-size: var(--ft-h1)!important;
 }
