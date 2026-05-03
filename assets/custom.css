@@ -15,7 +15,7 @@
   --text-color-blue: #0e4f95;
   --ft-h3: 1.625rem;
   --ft-h2: 3rem;
-  --ft-h1: 4rem;
+  --ft-h1: 4rem!important;
   --ft-h4: 1.5rem;
   --ft-h5: 1.375rem;
   --ft-h6: 1.25rem;
