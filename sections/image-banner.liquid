@@ -23,11 +23,6 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<div 
-  class="banner color-{{ section.settings.color_scheme }}"
-  style="background-color: {{ section.settings.custom_bg_color }};"
->
-
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
@@ -120,6 +115,14 @@
       }}
     </div>
   {%- endif -%}
+
+  <div 
+  class="banner color-{{ section.settings.color_scheme }}"
+  {% if section.settings.background_color != blank %}
+    style="background-color: {{ section.settings.background_color }};"
+  {% endif %}
+>
+
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
@@ -186,21 +189,11 @@
       "label": "t:sections.image-banner.settings.image.label"
     },
     {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "t:sections.image-banner.settings.image_2.label"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "background-1"
-    },
-    {
-      "type": "color",
-      "id": "custom_bg_color",
-      "label": "Background color"
-    },
+  "type": "color",
+  "id": "background_color",
+  "label": "Background color",
+  "default": "#ffffff"
+},
     {
       "type": "range",
       "id": "image_overlay_opacity",
