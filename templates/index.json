@@ -12,6 +12,13 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "text_deatF8": {
+          "type": "text",
+          "settings": {
+            "text": "Where Packaging Meets Perfection",
+            "text_style": "subtitle"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -32,6 +39,7 @@
         }
       },
       "block_order": [
+        "text_deatF8",
         "heading",
         "button"
       ],
