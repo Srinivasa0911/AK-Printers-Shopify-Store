@@ -136,7 +136,7 @@
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
-        "content_width": 1400,
+        "content_width": 1800,
         "slide_height": "medium",
         "slider_visual": "counter",
         "auto_rotate": false,
