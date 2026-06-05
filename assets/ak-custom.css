@@ -7,3 +7,8 @@ font-weight: 600;
 .slideshow__text.banner__box{
 max-width: 100rem!important;
 }
+
+.button, .shopify-challenge__button, .customer button{
+background-color:#fff;
+color:#000;
+}
