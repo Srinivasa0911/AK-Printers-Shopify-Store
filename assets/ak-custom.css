@@ -11,4 +11,5 @@ max-width: 100rem!important;
 .button.button--secondary:hover{
 background-color:#fff;
 color:#000;
+border:1px solid #fff;
 }
