@@ -8,7 +8,7 @@ font-weight: 600;
 max-width: 100rem!important;
 }
 
-.button, .shopify-challenge__button, .customer button{
+.button.button--secondary:hover{
 background-color:#fff;
 color:#000;
 }
