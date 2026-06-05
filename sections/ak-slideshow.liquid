@@ -166,7 +166,7 @@
             </div>
             {%- endif -%}            
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}"  style="max-width: {{ block.settings.content_width }}px;">
                 {{ block.settings.heading }}
               </h2>
             {%- endif -%}
@@ -435,6 +435,16 @@
           "id": "heading",
           "default": "t:sections.slideshow.blocks.slide.settings.heading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+        "type": "range",
+        "id": "content_width",
+        "min": 400,
+        "max": 1800,
+        "step": 50,
+        "unit": "px",
+        "label": "Content Width",
+        "default": 800
         },
         {
           "type": "select",
