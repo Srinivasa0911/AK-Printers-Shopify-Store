@@ -107,7 +107,6 @@
         "heading",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/ak_printers_rigid_box_manufacturers.webp",
         "image_2": "shopify://shop_images/ak_printers_draw_boxes.webp",
