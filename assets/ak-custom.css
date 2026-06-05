@@ -1,5 +1,9 @@
 .banner__custom-text {
 margin-bottom: 12px;
 line-height: 1.4;
-font-weight: 900;
+font-weight: 600;
+}
+
+.slideshow__text.banner__box{
+max-width: 100rem;
 }
