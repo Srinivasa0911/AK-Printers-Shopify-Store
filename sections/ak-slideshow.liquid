@@ -159,7 +159,7 @@
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}" style="max-width: {{ block.settings.content_width }}px;">
             {%- if block.settings.custom_text != blank -%}
             <div class="banner__custom-text" style="font-size: {{ block.settings.custom_text_font_size }}px;">
             {{ block.settings.custom_text }}
@@ -290,6 +290,16 @@
       ],
       "default": "full_bleed",
       "label": "t:sections.slideshow.settings.layout.label"
+    },
+    {
+  "type": "range",
+  "id": "content_width",
+  "min": 400,
+  "max": 1800,
+  "step": 50,
+  "unit": "px",
+  "label": "Content Width",
+  "default": 800
     },
     {
       "type": "select",
