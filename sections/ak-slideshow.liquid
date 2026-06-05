@@ -168,6 +168,10 @@
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
                 {{ block.settings.heading }}
+                 <br>
+                {{ block.settings.heading_line_2 }}
+                 <br>
+                {{ block.settings.heading_line_3 }}
               </h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
@@ -436,6 +440,16 @@
           "default": "t:sections.slideshow.blocks.slide.settings.heading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
         },
+        {
+        "type": "text",
+        "id": "heading_line_2",
+        "label": "Heading Line 2"
+        },
+        {
+        "type": "text",
+        "id": "heading_line_3",
+        "label": "Heading Line 3"
+        }
         {
           "type": "select",
           "id": "heading_size",
