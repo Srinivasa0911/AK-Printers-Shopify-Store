@@ -37,8 +37,9 @@
         "slide_QqP8DD": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
-            "custom_text": "Your custom text here",
+            "image": "shopify://shop_images/about_us_banner.webp",
+            "image_overlay_opacity": 70,
+            "custom_text": "Where Packaging Meets Perfection",
             "custom_text_font_size": 16,
             "heading": "Image slide",
             "heading_line_2": "",
@@ -48,11 +49,11 @@
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
-            "show_text_box": true,
+            "show_text_box": false,
             "box_align": "middle-center",
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "color_scheme": ""
+            "color_scheme": "scheme-5"
           }
         }
       },
