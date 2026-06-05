@@ -160,6 +160,13 @@
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+            {% if block.settings.custom_text != blank %}
+            <div
+            class="banner__custom-text"
+            style="font-size: {{ block.settings.custom_text_size }}px;">
+            {{ block.settings.custom_text }}
+            </div>
+            {% endif %}
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
                 {{ block.settings.heading }}
@@ -409,6 +416,22 @@
           "type": "header",
           "content": "t:sections.slideshow.blocks.slide.settings.header_text.content"
         },
+        {
+         "type": "text",
+         "id": "custom_text",
+         "label": "Custom Text",
+         "default": "Welcome to AK Printers"
+        },
+        {
+        "type": "range",
+        "id": "custom_text_size",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "label": "Custom Text Font Size",
+        "default": 16
+        }
         {
           "type": "inline_richtext",
           "id": "heading",
