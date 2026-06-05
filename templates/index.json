@@ -96,8 +96,8 @@
             "image_overlay_opacity": 70,
             "custom_text": "Where Packaging Meets Perfection",
             "custom_text_font_size": 18,
-            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
-            "heading_size": "h0",
+            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
+            "heading_size": "hxl",
             "subheading": "",
             "button_label": "Explore Now",
             "link": "#",
@@ -136,7 +136,6 @@
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
-        "content_width": 1800,
         "slide_height": "medium",
         "slider_visual": "counter",
         "auto_rotate": false,
