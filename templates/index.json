@@ -94,8 +94,6 @@
           "settings": {
             "image": "shopify://shop_images/Main_Banner.avif",
             "image_overlay_opacity": 70,
-            "custom_text": "Where Packaging Meets Perfection",
-            "custom_text_font_size": 18,
             "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
             "heading_size": "h0",
             "subheading": "",
@@ -113,8 +111,6 @@
           "type": "slide",
           "settings": {
             "image_overlay_opacity": 0,
-            "custom_text": "Your custom text here",
-            "custom_text_font_size": 16,
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
