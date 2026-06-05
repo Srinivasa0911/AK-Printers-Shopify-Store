@@ -5,5 +5,5 @@ font-weight: 600;
 }
 
 .slideshow__text.banner__box{
-max-width: 100rem;
+max-width: 100rem!important;
 }
