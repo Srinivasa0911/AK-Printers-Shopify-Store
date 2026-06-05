@@ -164,14 +164,7 @@
             <div class="banner__custom-text" style="font-size: {{ block.settings.custom_text_font_size }}px;">
             {{ block.settings.custom_text }}
             </div>
-            {%- endif -%}
-
-{%- if block.settings.heading != blank -%}
-  <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-    {{ block.settings.heading }}
-  </h2>
-{%- endif -%}
-            
+            {%- endif -%}            
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
                 {{ block.settings.heading }}
