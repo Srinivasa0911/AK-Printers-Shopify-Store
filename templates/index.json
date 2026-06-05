@@ -9,6 +9,55 @@
  */
 {
   "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "text_deatF8": {
+          "type": "text",
+          "settings": {
+            "text": "Where Packaging Meets Perfection",
+            "text_style": "subtitle"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_deatF8",
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ak_printers_rigid_box_manufacturers.webp",
+        "image_2": "shopify://shop_images/ak_printers_draw_boxes.webp",
+        "image_overlay_opacity": 70,
+        "image_height": "large",
+        "image_behavior": "ambient",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-5",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
     "ak_slideshow_jc6E6w": {
       "type": "ak-slideshow",
       "blocks": {
@@ -61,6 +110,7 @@
         "slide_HVP4Fh",
         "slide_QqP8DD"
       ],
+      "disabled": true,
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
@@ -71,55 +121,6 @@
         "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "text_deatF8": {
-          "type": "text",
-          "settings": {
-            "text": "Where Packaging Meets Perfection",
-            "text_style": "subtitle"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Explore Now",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_deatF8",
-        "heading",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/ak_printers_rigid_box_manufacturers.webp",
-        "image_2": "shopify://shop_images/ak_printers_draw_boxes.webp",
-        "image_overlay_opacity": 70,
-        "image_height": "large",
-        "image_behavior": "ambient",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-5",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
       }
     },
     "featured_collection": {
@@ -152,8 +153,8 @@
     }
   },
   "order": [
-    "ak_slideshow_jc6E6w",
     "image_banner",
+    "ak_slideshow_jc6E6w",
     "featured_collection"
   ]
 }
