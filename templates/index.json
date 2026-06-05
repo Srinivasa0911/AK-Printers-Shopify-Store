@@ -86,15 +86,17 @@
         "padding_bottom": 36
       }
     },
-    "slideshow_AXgGJV": {
-      "type": "slideshow",
+    "ak_slideshow_jc6E6w": {
+      "type": "ak-slideshow",
       "blocks": {
-        "slide_FmXRyx": {
+        "slide_HVP4Fh": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Main_Banner.avif",
             "image_overlay_opacity": 70,
-            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
+            "custom_text": "Where Packaging Meets Perfection",
+            "custom_text_font_size": 18,
+            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
             "heading_size": "h0",
             "subheading": "",
             "button_label": "Explore Now",
@@ -107,10 +109,12 @@
             "color_scheme": "scheme-5"
           }
         },
-        "slide_3wjxiH": {
+        "slide_QqP8DD": {
           "type": "slide",
           "settings": {
             "image_overlay_opacity": 0,
+            "custom_text": "Your custom text here",
+            "custom_text_font_size": 16,
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -126,10 +130,10 @@
         }
       },
       "block_order": [
-        "slide_FmXRyx",
-        "slide_3wjxiH"
+        "slide_HVP4Fh",
+        "slide_QqP8DD"
       ],
-      "name": "t:sections.slideshow.presets.name",
+      "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -145,6 +149,6 @@
   "order": [
     "image_banner",
     "featured_collection",
-    "slideshow_AXgGJV"
+    "ak_slideshow_jc6E6w"
   ]
 }
