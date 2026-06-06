@@ -168,12 +168,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button ak-custom-button-1{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
-style="
-  --btn-bg: {{ block.settings.button_bg_color }};
-  --btn-text: {{ block.settings.button_text_color }};
-  --btn-hover-bg: {{ block.settings.button_hover_bg_color }};
-  --btn-hover-text: {{ block.settings.button_hover_text_color }};"
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -185,12 +180,7 @@ style="
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button ak-custom-button-2{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-style="
-  --btn-bg: {{ block.settings.button_2_bg_color }};
-  --btn-text: {{ block.settings.button_2_text_color }};
-  --btn-hover-bg: {{ block.settings.button_2_hover_bg_color }};
-  --btn-hover-text: {{ block.settings.button_2_hover_text_color }};"
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
