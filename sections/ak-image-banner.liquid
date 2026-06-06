@@ -168,13 +168,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
-                   style="
-    --btn-bg: {{ block.settings.button_bg_color }};
-    --btn-text: {{ block.settings.button_text_color }};
-    --btn-hover-bg: {{ block.settings.button_hover_bg_color }};
-    --btn-hover-text: {{ block.settings.button_hover_text_color }};
-  "
+                  class="button color-{{ block.settings.button_color_scheme }} button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -186,13 +180,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                  style="
-    --btn-bg: {{ block.settings.button_bg_color }};
-    --btn-text: {{ block.settings.button_text_color }};
-    --btn-hover-bg: {{ block.settings.button_hover_bg_color }};
-    --btn-hover-text: {{ block.settings.button_hover_text_color }};
-  "
+                  class="button color-{{ block.settings.button_color_scheme }} button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
@@ -533,28 +521,10 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
         },
         {
-  "type": "color",
-  "id": "button_bg_color",
-  "label": "Button Background Color",
-  "default": "#000000"
-},
-{
-  "type": "color",
-  "id": "button_text_color",
-  "label": "Button Text Color",
-  "default": "#ffffff"
-},
-{
-  "type": "color",
-  "id": "button_hover_bg_color",
-  "label": "Button Hover Background Color",
-  "default": "#333333"
-},
-{
-  "type": "color",
-  "id": "button_hover_text_color",
-  "label": "Button Hover Text Color",
-  "default": "#ffffff"
+  "type": "color_scheme",
+  "id": "button_color_scheme",
+  "label": "Button Color Scheme",
+  "default": "scheme-1"
 },
         {
           "type": "checkbox",
@@ -578,29 +548,11 @@
           "id": "button_link_2",
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
         },
-         {
-  "type": "color",
-  "id": "button_bg_color",
-  "label": "Button Background Color",
-  "default": "#000000"
-},
-{
-  "type": "color",
-  "id": "button_text_color",
-  "label": "Button Text Color",
-  "default": "#ffffff"
-},
-{
-  "type": "color",
-  "id": "button_hover_bg_color",
-  "label": "Button Hover Background Color",
-  "default": "#333333"
-},
-{
-  "type": "color",
-  "id": "button_hover_text_color",
-  "label": "Button Hover Text Color",
-  "default": "#ffffff"
+        {
+  "type": "color_scheme",
+  "id": "button_color_scheme",
+  "label": "Button Color Scheme",
+  "default": "scheme-1"
 },
         {
           "type": "checkbox",
