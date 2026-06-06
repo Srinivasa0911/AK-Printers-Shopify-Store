@@ -121,7 +121,7 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext style="--mobile-heading-size: {{ block.settings.heading_mobile_size }}px;" {{ block.settings.heading_size }}"
+              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
@@ -415,16 +415,6 @@
           "label": "t:sections.all.heading_size.label"
         }
       ]
-    },
-    {
-        "type": "range",
-        "id": "heading_mobile_size",
-        "min": 20,
-        "max": 60,
-        "step": 1,
-        "unit": "px",
-        "label": "Mobile Heading Size",
-        "default": 32
     },
     {
       "type": "text",
