@@ -87,10 +87,18 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "#",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
+            "button_bg_color": "#d33a3a",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#3baa4e",
+            "button_hover_text_color": "#ffffff",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": false,
+            "button_2_bg_color": "#000000",
+            "button_2_text_color": "#ffffff",
+            "button_2_hover_bg_color": "#333333",
+            "button_2_hover_text_color": "#ffffff"
           }
         }
       },
