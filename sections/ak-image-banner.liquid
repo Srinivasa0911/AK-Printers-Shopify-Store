@@ -168,7 +168,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button color-{{ block.settings.button_color_scheme }} button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -180,7 +180,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button color-{{ block.settings.button_color_scheme }} button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
@@ -521,12 +521,6 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
         },
         {
-  "type": "color_scheme",
-  "id": "button_color_scheme",
-  "label": "Button Color Scheme",
-  "default": "scheme-1"
-},
-        {
           "type": "checkbox",
           "id": "button_style_secondary_1",
           "default": false,
@@ -548,12 +542,6 @@
           "id": "button_link_2",
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
         },
-        {
-  "type": "color_scheme",
-  "id": "button_color_scheme",
-  "label": "Button Color Scheme",
-  "default": "scheme-1"
-},
         {
           "type": "checkbox",
           "id": "button_style_secondary_2",
