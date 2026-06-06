@@ -121,15 +121,37 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
-              {{ block.shopify_attributes }}
-            >
-              {{ block.settings.heading }}
-              <br>
-              {{ block.settings.heading_line_2 }}
-              <br>
-              {{ block.settings.heading_line_3 }}
-            </h2>
+  class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+  style="--mobile-heading-size: {{ block.settings.heading_mobile_size }}px;"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.heading != blank %}
+    <span
+      class="heading-line-1"
+      style="color: {{ block.settings.heading_line_1_color }};"
+    >
+      {{ block.settings.heading }}
+    </span>
+  {% endif %}
+
+  {% if block.settings.heading_line_2 != blank %}
+    <span
+      class="heading-line-2"
+      style="color: {{ block.settings.heading_line_2_color }};"
+    >
+      {{ block.settings.heading_line_2 }}
+    </span>
+  {% endif %}
+
+  {% if block.settings.heading_line_3 != blank %}
+    <span
+      class="heading-line-3"
+      style="color: {{ block.settings.heading_line_3_color }};"
+    >
+      {{ block.settings.heading_line_3 }}
+    </span>
+  {% endif %}
+</h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
@@ -377,14 +399,32 @@
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         },
         {
+        "type": "color",
+        "id": "heading_line_1_color",
+        "label": "Heading Line 1 Color",
+        "default": "#ffffff"
+        },
+        {
         "type": "text",
         "id": "heading_line_2",
         "label": "Heading Line 2"
         },
         {
+        "type": "color",
+        "id": "heading_line_2_color",
+        "label": "Heading Line 2 Color",
+        "default": "#ffffff"
+        },
+        {
         "type": "text",
         "id": "heading_line_3",
         "label": "Heading Line 3"
+        },
+        {
+        "type": "color",
+        "id": "heading_line_3_color",
+        "label": "Heading Line 3 Color",
+        "default": "#ffffff"
         },
         {
           "type": "select",
@@ -415,6 +455,16 @@
           "label": "t:sections.all.heading_size.label"
         }
       ]
+    },
+    {
+        "type": "range",
+        "id": "heading_mobile_size",
+        "min": 16,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "label": "Mobile Heading Font Size",
+        "default": 32
     },
     {
       "type": "text",
