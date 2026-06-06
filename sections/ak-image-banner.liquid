@@ -162,29 +162,28 @@
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
-                <a
-  {% if block.settings.button_link_1 == blank %}
-    role="link" aria-disabled="true"
-  {% else %}
-    href="{{ block.settings.button_link_1 }}"
-  {% endif %}
-  class="button ak-custom-button-1 button-1-{{ block.id }}{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
->
-  {{- block.settings.button_label_1 | escape -}}
-</a>
+                  <a
+                  {% if block.settings.button_link_1 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_1 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label_1 | escape -}}
+                </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
-         <a
-  {% if block.settings.button_link_2 == blank %}
-    role="link" aria-disabled="true"
-  {% else %}
-    href="{{ block.settings.button_link_2 }}"
-  {% endif %}
-  class="button ak-custom-button-2{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-  style="--btn-bg: {{ block.settings.button_2_bg_color }}; --btn-text: {{ block.settings.button_2_text_color }}; --btn-hover-bg: {{ block.settings.button_2_hover_bg_color }}; --btn-hover-text: {{ block.settings.button_2_hover_text_color }};"
->
-  {{- block.settings.button_label_2 | escape -}}
-</a>
+   <a
+                  {% if block.settings.button_link_2 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.button_link_2 }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                  {{- block.settings.button_label_2 | escape -}}
+                </a>
               {%- endif -%}
             </div>
         {%- endcase -%}
@@ -428,16 +427,6 @@
         "default": "#ffffff"
         },
         {
-        "type": "range",
-        "id": "heading_mobile_size",
-        "min": 16,
-        "max": 80,
-        "step": 1,
-        "unit": "px",
-        "label": "Mobile Heading Font Size",
-        "default": 32
-        },
-        {
           "type": "select",
           "id": "heading_size",
           "options": [
@@ -527,30 +516,6 @@
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
         },
-{
-  "type": "color",
-  "id": "button_bg_color",
-  "label": "Button 1 Background Color",
-  "default": "#000000"
-},
-{
-  "type": "color",
-  "id": "button_text_color",
-  "label": "Button 1 Text Color",
-  "default": "#ffffff"
-},
-{
-  "type": "color",
-  "id": "button_hover_bg_color",
-  "label": "Button 1 Hover Background Color",
-  "default": "#333333"
-},
-{
-  "type": "color",
-  "id": "button_hover_text_color",
-  "label": "Button 1 Hover Text Color",
-  "default": "#ffffff"
-},
         {
         "type": "header",
         "content": "t:sections.image-banner.blocks.buttons.settings.header_2.content"
@@ -572,31 +537,7 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
-        },
-{
-  "type": "color",
-  "id": "button_2_bg_color",
-  "label": "Button 2 Background Color",
-  "default": "#000000"
-},
-{
-  "type": "color",
-  "id": "button_2_text_color",
-  "label": "Button 2 Text Color",
-  "default": "#ffffff"
-},
-{
-  "type": "color",
-  "id": "button_2_hover_bg_color",
-  "label": "Button 2 Hover Background Color",
-  "default": "#333333"
-},
-{
-  "type": "color",
-  "id": "button_2_hover_text_color",
-  "label": "Button 2 Hover Text Color",
-  "default": "#ffffff"
-}
+        }
       ]
     }
   ],
