@@ -125,6 +125,10 @@
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
+              <br>
+              {{ block.settings.heading_line_2 }}
+              <br>
+              {{ block.settings.heading_line_3 }}
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -371,6 +375,16 @@
           "id": "heading",
           "default": "t:sections.image-banner.blocks.heading.settings.heading.default",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+        "type": "text",
+        "id": "heading_line_2",
+        "label": "Heading Line 2"
+        },
+        {
+        "type": "text",
+        "id": "heading_line_3",
+        "label": "Heading Line 3"
         },
         {
           "type": "select",
