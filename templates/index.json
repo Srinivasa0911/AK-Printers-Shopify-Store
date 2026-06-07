@@ -145,7 +145,7 @@
             "image": "shopify://shop_images/about_us_banner.webp",
             "image_overlay_opacity": 70,
             "custom_text": "Where Packaging Meets Perfection",
-            "custom_text_font_size": 16,
+            "custom_text_font_size": 18,
             "heading": "Crafting Custom Prints",
             "heading_line_2": "That Speak Your Brand’s",
             "heading_line_3": "Language",
@@ -166,13 +166,12 @@
         "slide_HVP4Fh",
         "slide_QqP8DD"
       ],
-      "disabled": true,
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
         "slider_visual": "dots",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "ambient",
         "show_text_below": true,
