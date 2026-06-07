@@ -16,8 +16,18 @@ border:1px solid #fff;
 
 .slideshow__controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
+}
+
+.slider-counter__link--dots .dot {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+.slider-counter__link--active .dot {
+  background-color: #f4b400;
+  opacity: 1;
 }
