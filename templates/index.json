@@ -172,6 +172,7 @@
         "slide_HVP4Fh",
         "slide_QqP8DD"
       ],
+      "disabled": true,
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
