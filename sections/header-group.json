@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_WztFYz": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement_bWwnUB": {
           "type": "announcement",
           "settings": {
@@ -27,19 +34,12 @@
             "text": "Premium Rigid Box Manufacturer",
             "link": ""
           }
-        },
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
         }
       },
       "block_order": [
+        "announcement_WztFYz",
         "announcement_bWwnUB",
-        "announcement_XmGbHK",
-        "announcement-bar-0"
+        "announcement_XmGbHK"
       ],
       "settings": {
         "auto_rotate": true,
