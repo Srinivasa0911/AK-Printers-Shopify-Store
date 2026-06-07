@@ -24,10 +24,10 @@ border:1px solid #fff;
 
 .slider-counter__link--dots .dot {
   background-color: #ffffff!important;
-  opacity: 0.5!important;
+  opacity: 0.75!important;
 }
 
 .slider-counter__link--active .dot {
-  background-color: #f4b400!important;
+  background-color: #fff!important;
   opacity: 1!important;
 }
