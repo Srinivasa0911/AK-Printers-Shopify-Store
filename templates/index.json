@@ -9,56 +9,6 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "text_deatF8": {
-          "type": "text",
-          "settings": {
-            "text": "Where Packaging Meets Perfection",
-            "text_style": "subtitle"
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Crafting Custom Prints That Speak Your Brand’s Language",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Explore Now",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "text_deatF8",
-        "heading",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/ak_printers_rigid_box_manufacturers.webp",
-        "image_2": "shopify://shop_images/ak_printers_draw_boxes.webp",
-        "image_overlay_opacity": 70,
-        "image_height": "large",
-        "image_behavior": "ambient",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-5",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
-    },
     "ak_image_banner_h9KVKE": {
       "type": "ak-image-banner",
       "blocks": {
@@ -185,6 +135,53 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "image_with_text_he3pfR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_CdbRVe": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h2"
+          }
+        },
+        "text_iNXqKk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At AK Printers, we specialize in high-quality custom rigid boxes that reflect your brand identity. Committed to innovation, excellence, and customer satisfaction, we work closely with you to deliver tailored packaging solutions-on time and within budget. We also prioritize sustainability, offering eco-friendly printing options without compromising on quality. Whether you need a small batch or large production run, trust AK Printers to deliver exceptional results.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Y6tA7a": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CdbRVe",
+        "text_iNXqKk",
+        "button_Y6tA7a"
+      ],
+      "name": "About Us",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -215,9 +212,9 @@
     }
   },
   "order": [
-    "image_banner",
     "ak_image_banner_h9KVKE",
     "ak_slideshow_jc6E6w",
+    "image_with_text_he3pfR",
     "featured_collection"
   ]
 }
