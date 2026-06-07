@@ -31,3 +31,15 @@ border:1px solid #fff;
   background-color: #fff!important;
   opacity: 1!important;
 }
+
+.slider-button .icon{
+color:#fff!important;
+}
+
+.slideshow__autoplay{
+fill:#fff;
+}
+
+.slideshow__autoplay:hover path{
+fill:#fff;
+}
