@@ -37,9 +37,9 @@ color:#fff!important;
 }
 
 .slideshow__autoplay{
-fill:#fff;
+fill:#fff!important;
 }
 
 .slideshow__autoplay:hover path{
-fill:#fff;
+fill:#fff!important;
 }
