@@ -44,7 +44,7 @@
       "name": "AK Announcement Bar",
       "settings": {
         "color_scheme": "scheme-4",
-        "scroll_speed": 30,
+        "scroll_speed": 20,
         "show_line_separator": true,
         "show_social": false,
         "enable_country_selector": false,
