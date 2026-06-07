@@ -70,24 +70,24 @@
         "padding_bottom": 20
       }
     },
-    "ak_announcement_bar_jgrTKt": {
+    "ak_announcement_bar_HQmywm": {
       "type": "ak-announcement-bar",
       "blocks": {
-        "announcement_UXJxat": {
+        "announcement_QAPDd8": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to our store 223",
             "link": ""
           }
         },
-        "announcement_DgzdF9": {
+        "announcement_tF9ipj": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to our store 11",
             "link": ""
           }
         },
-        "announcement_cXH7jw": {
+        "announcement_me4Jhi": {
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
@@ -96,25 +96,19 @@
         }
       },
       "block_order": [
-        "announcement_UXJxat",
-        "announcement_DgzdF9",
-        "announcement_cXH7jw"
+        "announcement_QAPDd8",
+        "announcement_tF9ipj",
+        "announcement_me4Jhi"
       ],
       "name": "AK Announcement Bar",
       "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 3,
-        "color_scheme": "",
-        "show_line_separator": true,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "color_scheme": "scheme-4"
       }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "ak_announcement_bar_jgrTKt"
+    "ak_announcement_bar_HQmywm"
   ]
 }
