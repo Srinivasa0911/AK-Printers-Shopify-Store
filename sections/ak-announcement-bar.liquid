@@ -48,7 +48,7 @@
         {%- endif -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}
-  <div class="announcement-bar ak-marquee">
+  <div class="announcement-bar ak-marquee" style="--marquee-speed: {{ section.settings.scroll_speed }}s;">
     <div class="ak-marquee-track">
 
       {% for block in section.blocks %}

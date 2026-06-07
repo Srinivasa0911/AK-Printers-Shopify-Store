@@ -58,7 +58,10 @@ background:#000!important;
   display: flex;
   align-items: center;
   width: max-content;
-  animation: akMarquee 20s linear infinite;
+}
+
+.ak-marquee-track {
+  animation: akMarquee var(--marquee-speed, 25s) linear infinite;
 }
 
 .ak-marquee-item {
