@@ -43,3 +43,7 @@ fill:#fff!important;
 .slideshow__autoplay:hover path{
 fill:#fff!important;
 }
+
+.banner:after, .banner__media:after{
+background:#000;
+}
