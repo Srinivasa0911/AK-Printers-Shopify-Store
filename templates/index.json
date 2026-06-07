@@ -76,9 +76,8 @@
             "heading_line_2": "That Speak Your Brand’s",
             "heading_line_3": "Language",
             "heading_line_1_color": "#ffffff",
-            "heading_line_2_color": "#c5e421",
+            "heading_line_2_color": "#f9b22e",
             "heading_line_3_color": "#ffffff",
-            "heading_mobile_size": 16,
             "heading_size": "h0"
           }
         },
@@ -87,18 +86,10 @@
           "settings": {
             "button_label_1": "Shop Now",
             "button_link_1": "#",
-            "button_style_secondary_1": false,
-            "button_bg_color": "#d33a3a",
-            "button_text_color": "#ffffff",
-            "button_hover_bg_color": "#3baa4e",
-            "button_hover_text_color": "#ffffff",
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false,
-            "button_2_bg_color": "#000000",
-            "button_2_text_color": "#ffffff",
-            "button_2_hover_bg_color": "#333333",
-            "button_2_hover_text_color": "#ffffff"
+            "button_style_secondary_2": false
           }
         }
       },
@@ -154,7 +145,7 @@
             "image": "shopify://shop_images/about_us_banner.webp",
             "image_overlay_opacity": 70,
             "custom_text": "Where Packaging Meets Perfection",
-            "custom_text_font_size": 16,
+            "custom_text_font_size": 18,
             "heading": "Crafting Custom Prints",
             "heading_line_2": "That Speak Your Brand’s",
             "heading_line_3": "Language",
@@ -175,13 +166,12 @@
         "slide_HVP4Fh",
         "slide_QqP8DD"
       ],
-      "disabled": true,
       "name": "AK Slideshow",
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "medium",
+        "slide_height": "large",
         "slider_visual": "dots",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "ambient",
         "show_text_below": true,
