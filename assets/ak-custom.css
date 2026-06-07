@@ -99,4 +99,9 @@ background:#000!important;
   height: 16px;
   background: #ffffff;
   transform: translateY(-50%);
+  opacity:1;
+}
+
+.ak-marquee-item:last-child::after {
+  display: none;
 }
