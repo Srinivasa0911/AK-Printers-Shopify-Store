@@ -57,11 +57,11 @@ background:#000!important;
 .ak-marquee-track {
   display: flex;
   align-items: center;
-  width: max-content;
+  width: 100%;
 }
 
 .ak-marquee-track {
-  animation: akMarquee var(--marquee-speed, 25s) linear infinite;
+  animation: akMarquee var(--marquee-speed, 20s) linear infinite;
 }
 
 .ak-marquee-item {
@@ -86,8 +86,8 @@ background:#000!important;
 
 .ak-marquee-item {
   position: relative;
-  padding-right: 40px;
-  margin-right: 40px;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 
 .ak-marquee-item::after {
