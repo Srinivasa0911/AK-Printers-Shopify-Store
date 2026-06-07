@@ -14,6 +14,20 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_bWwnUB": {
+          "type": "announcement",
+          "settings": {
+            "text": "Bulk Orders Available",
+            "link": ""
+          }
+        },
+        "announcement_XmGbHK": {
+          "type": "announcement",
+          "settings": {
+            "text": "Premium Rigid Box Manufacturer",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -23,6 +37,8 @@
         }
       },
       "block_order": [
+        "announcement_bWwnUB",
+        "announcement_XmGbHK",
         "announcement-bar-0"
       ],
       "settings": {
