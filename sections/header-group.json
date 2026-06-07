@@ -14,10 +14,10 @@
     "ak_announcement_bar_HQmywm": {
       "type": "ak-announcement-bar",
       "blocks": {
-        "announcement_QAPDd8": {
+        "announcement_me4Jhi": {
           "type": "announcement",
           "settings": {
-            "text": "Bulk Orders Available",
+            "text": "Welcome to our store",
             "link": ""
           }
         },
@@ -28,24 +28,24 @@
             "link": ""
           }
         },
-        "announcement_me4Jhi": {
+        "announcement_QAPDd8": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Bulk Orders Available",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_QAPDd8",
+        "announcement_me4Jhi",
         "announcement_tF9ipj",
-        "announcement_me4Jhi"
+        "announcement_QAPDd8"
       ],
       "name": "AK Announcement Bar",
       "settings": {
         "color_scheme": "scheme-4",
         "scroll_speed": 20,
-        "show_line_separator": true,
+        "show_line_separator": false,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
