@@ -11,5 +11,13 @@ max-width: 100rem!important;
 .button.button--secondary:hover{
 background-color:#fff;
 color:#000;
-border:1px solid #fff;
+border:1px solid #fff;  
+}
+
+.slideshow__controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
 }
