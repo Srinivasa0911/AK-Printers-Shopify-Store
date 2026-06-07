@@ -14,38 +14,30 @@
     "ak_announcement_bar_HQmywm": {
       "type": "ak-announcement-bar",
       "blocks": {
-        "announcement_QAPDd8": {
+        "announcement_8mzLf8": {
           "type": "announcement",
           "settings": {
-            "text": "Bulk Orders Available",
+            "text": "Welcome to Our Store | Premium Rigid Box Manufacturer | Bulk Orders Available",
             "link": ""
           }
         },
-        "announcement_tF9ipj": {
+        "announcement_RTQxeX": {
           "type": "announcement",
           "settings": {
-            "text": "Premium Rigid Box Manufacturer",
-            "link": ""
-          }
-        },
-        "announcement_me4Jhi": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to Our Store | Premium Rigid Box Manufacturer | Bulk Orders Available",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_QAPDd8",
-        "announcement_tF9ipj",
-        "announcement_me4Jhi"
+        "announcement_8mzLf8",
+        "announcement_RTQxeX"
       ],
       "name": "AK Announcement Bar",
       "settings": {
         "color_scheme": "scheme-4",
         "scroll_speed": 20,
-        "show_line_separator": true,
+        "show_line_separator": false,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false
