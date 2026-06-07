@@ -14,21 +14,42 @@
     "ak_announcement_bar_HQmywm": {
       "type": "ak-announcement-bar",
       "blocks": {
-        "announcement_me4Jhi": {
+        "announcement_RTQxeX": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to Our Store",
             "link": ""
           }
         },
-        "announcement_tF9ipj": {
+        "announcement_me4Jhi": {
           "type": "announcement",
           "settings": {
             "text": "Premium Rigid Box Manufacturer",
             "link": ""
           }
         },
-        "announcement_QAPDd8": {
+        "announcement_nFMLVc": {
+          "type": "announcement",
+          "settings": {
+            "text": "Bulk Orders Available",
+            "link": ""
+          }
+        },
+        "announcement_ACBDWV": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to Our Store",
+            "link": ""
+          }
+        },
+        "announcement_rhajGh": {
+          "type": "announcement",
+          "settings": {
+            "text": "Premium Rigid Box Manufacturer",
+            "link": ""
+          }
+        },
+        "announcement_Ka7W87": {
           "type": "announcement",
           "settings": {
             "text": "Bulk Orders Available",
@@ -37,9 +58,12 @@
         }
       },
       "block_order": [
+        "announcement_RTQxeX",
         "announcement_me4Jhi",
-        "announcement_tF9ipj",
-        "announcement_QAPDd8"
+        "announcement_nFMLVc",
+        "announcement_ACBDWV",
+        "announcement_rhajGh",
+        "announcement_Ka7W87"
       ],
       "name": "AK Announcement Bar",
       "settings": {
