@@ -83,3 +83,20 @@ background:#000!important;
     transform: translateX(-100%);
   }
 }
+
+.ak-marquee-item {
+  position: relative;
+  padding-right: 40px;
+  margin-right: 40px;
+}
+
+.ak-marquee-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 16px;
+  background: #ffffff;
+  transform: translateY(-50%);
+}
