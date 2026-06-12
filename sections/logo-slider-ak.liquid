@@ -80,6 +80,22 @@
   </div>
 </div>
 
+<div class="ak-logo-navigation">
+  <button type="button" class="ak-logo-arrow ak-logo-arrow--prev" aria-label="Previous">
+    {{ 'icon-caret.svg' | inline_asset_content }}
+  </button>
+
+  <div class="ak-logo-dots">
+    {% for block in section.blocks limit: 6 %}
+      <span class="ak-logo-dot"></span>
+    {% endfor %}
+  </div>
+
+  <button type="button" class="ak-logo-arrow ak-logo-arrow--next" aria-label="Next">
+    {{ 'icon-caret.svg' | inline_asset_content }}
+  </button>
+</div>
+
 {% schema %}
 {
   "name": "AK Logo Slider",
@@ -125,6 +141,22 @@
       "label": "Pause on Hover",
       "default": true
     },
+    {
+  "type": "header",
+  "content": "Navigation"
+},
+{
+  "type": "checkbox",
+  "id": "show_arrows",
+  "label": "Show Arrows",
+  "default": true
+},
+{
+  "type": "checkbox",
+  "id": "show_dots",
+  "label": "Show Dot Navigation",
+  "default": true
+},
     {
       "type": "checkbox",
       "id": "enable_grayscale",

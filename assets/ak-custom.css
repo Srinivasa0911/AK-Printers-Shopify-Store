@@ -191,3 +191,53 @@ padding: 0 15px;
 width: calc(var(--logo-width) * 0.8);
 }
 }
+
+.ak-logo-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ak-logo-arrow {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  color: rgb(var(--color-foreground));
+}
+
+.ak-logo-arrow svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.ak-logo-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ak-logo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(var(--color-foreground), 0.3);
+}
+
+.ak-logo-dot:first-child {
+  background: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .ak-logo-navigation {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ak-logo-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
