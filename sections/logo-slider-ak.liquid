@@ -74,26 +74,38 @@
           </div>
         {% endfor %}
 
+  {% if section.settings.show_arrows %}
+  <div class="ak-logo-arrows">
+    <button
+      type="button"
+      class="ak-logo-arrow ak-logo-arrow--prev"
+      aria-label="Previous"
+    >
+      {{ 'icon-caret.svg' | inline_asset_content }}
+    </button>
+
+    <button
+      type="button"
+      class="ak-logo-arrow ak-logo-arrow--next"
+      aria-label="Next"
+    >
+      {{ 'icon-caret.svg' | inline_asset_content }}
+    </button>
+  </div>
+  {% endif %}
+
+  {% if section.settings.show_dots %}
+  <div class="ak-logo-dots">
+    {% for block in section.blocks %}
+      <span class="ak-logo-dot"></span>
+    {% endfor %}
+  </div>
+{% endif %}
+
       </div>
     </div>
 
   </div>
-</div>
-
-<div class="ak-logo-navigation">
-  <button type="button" class="ak-logo-arrow ak-logo-arrow--prev" aria-label="Previous">
-    {{ 'icon-caret.svg' | inline_asset_content }}
-  </button>
-
-  <div class="ak-logo-dots">
-    {% for block in section.blocks limit: 6 %}
-      <span class="ak-logo-dot"></span>
-    {% endfor %}
-  </div>
-
-  <button type="button" class="ak-logo-arrow ak-logo-arrow--next" aria-label="Next">
-    {{ 'icon-caret.svg' | inline_asset_content }}
-  </button>
 </div>
 
 {% schema %}
@@ -141,7 +153,7 @@
       "label": "Pause on Hover",
       "default": true
     },
-    {
+   {
   "type": "header",
   "content": "Navigation"
 },
