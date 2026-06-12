@@ -1,32 +1,60 @@
-<section class="counter-section">
+<section class="counter-section"
+  style="
+    background: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+  "
+>
   <div class="page-width">
 
-    {% if section.settings.heading != blank %}
-      <div class="counter-heading">
-        <h2>{{ section.settings.heading }}</h2>
-        {% if section.settings.subheading != blank %}
-          <p>{{ section.settings.subheading }}</p>
-        {% endif %}
-      </div>
-    {% endif %}
+    <!-- Heading -->
+    <div class="counter-heading-wrapper">
 
-    <div class="counter-grid">
+      {% if section.settings.heading != blank %}
+        <h2 class="counter-heading"
+          style="font-size: {{ section.settings.heading_size }}px; color: {{ section.settings.heading_color }};">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <p class="counter-subheading" style="color: {{ section.settings.subheading_color }};">
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+
+      {% if section.settings.show_divider %}
+        <div class="counter-divider" style="background: {{ section.settings.accent_color }};"></div>
+      {% endif %}
+
+    </div>
+
+    <!-- Grid -->
+    <div class="counter-grid columns-{{ section.settings.columns_desktop }}">
 
       {% for block in section.blocks %}
-        <div class="counter-box">
+        <div class="counter-box"
+          style="
+            background: {{ section.settings.card_bg }};
+            border: {{ section.settings.border_width }}px solid {{ section.settings.border_color }};
+          "
+        >
 
-          {% if block.settings.icon != blank %}
+          {% if block.settings.icon != blank and section.settings.show_icons %}
             <div class="counter-icon">
-              <img src="{{ block.settings.icon | img_url: '100x' }}" alt="">
+              <img src="{{ block.settings.icon | img_url: '80x' }}" alt="">
             </div>
           {% endif %}
 
-          <div class="counter-number">
+          <div class="counter-number"
+            style="color: {{ section.settings.counter_color }};"
+          >
             <span class="count" data-target="{{ block.settings.number }}">0</span>{{ block.settings.suffix }}
           </div>
 
           {% if block.settings.title != blank %}
-            <div class="counter-title">{{ block.settings.title }}</div>
+            <div class="counter-title" style="color: {{ section.settings.text_color }}">
+              {{ block.settings.title }}
+            </div>
           {% endif %}
 
         </div>
@@ -36,46 +64,128 @@
   </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll('.count');
-
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const current = +counter.innerText;
-      const increment = Math.ceil(target / 80);
-
-      if (current < target) {
-        counter.innerText = current + increment;
-        setTimeout(updateCount, 30);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    updateCount();
-  });
-});
-</script>
-
 {% schema %}
 {
-  "name": "Counter Section",
+  "name": "Advanced Counter Section (Pro)",
   "settings": [
+
     {
       "type": "text",
       "id": "heading",
       "label": "Heading",
       "default": "Our Achievements"
     },
+
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Font Size",
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "default": 36
+    },
+
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#111111"
+    },
+
     {
       "type": "text",
       "id": "subheading",
       "label": "Subheading",
-      "default": "We are growing fast with happy clients"
+      "default": "Numbers that define our success"
+    },
+
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading Color",
+      "default": "#666666"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show Divider",
+      "default": true
+    },
+
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Color (Divider / Highlights)",
+      "default": "#000000"
+    },
+
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section Background Color",
+      "default": "#f7f9fc"
+    },
+
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Base Text Color",
+      "default": "#333333"
+    },
+
+    {
+      "type": "color",
+      "id": "card_bg",
+      "label": "Counter Card Background",
+      "default": "#ffffff"
+    },
+
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#eeeeee"
+    },
+
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border Width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 1
+    },
+
+    {
+      "type": "color",
+      "id": "counter_color",
+      "label": "Counter Number Color",
+      "default": "#000000"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_icons",
+      "label": "Show Icons",
+      "default": true
+    },
+
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "label": "Desktop Columns",
+      "default": "4",
+      "options": [
+        { "value": "4", "label": "4 Columns" },
+        { "value": "3", "label": "3 Columns" },
+        { "value": "2", "label": "2 Columns" }
+      ]
     }
   ],
+
   "blocks": [
     {
       "type": "counter",
@@ -89,13 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           "type": "number",
           "id": "number",
-          "label": "Number",
+          "label": "Counter Number",
           "default": 100
         },
         {
           "type": "text",
           "id": "suffix",
-          "label": "Suffix (e.g. +, %, k)",
+          "label": "Suffix (+, %, k)",
           "default": "+"
         },
         {
@@ -107,11 +217,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     }
   ],
+
   "max_blocks": 8,
+
   "presets": [
     {
-      "name": "Counter Section",
-      "category": "Custom"
+      "name": "Advanced Counter Section (Pro)",
+      "category": "Custom Sections"
     }
   ]
 }
