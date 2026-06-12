@@ -210,12 +210,85 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "ak_logo_slider_dcQEKQ": {
+      "type": "ak-logo-slider",
+      "blocks": {
+        "logo_zJhx79": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Urban.avif",
+            "link": "",
+            "alt_text": "urban"
+          }
+        },
+        "logo_J8arnw": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Shree_Mithai.avif",
+            "link": "",
+            "alt_text": "shree mithai"
+          }
+        },
+        "logo_GNLWUt": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/happyherbs.avif",
+            "link": "",
+            "alt_text": "happy herbs"
+          }
+        },
+        "logo_MMhU4K": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Hidesign.avif",
+            "link": "",
+            "alt_text": "hide sign"
+          }
+        },
+        "logo_zLKmRi": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/equitas.avif",
+            "link": "",
+            "alt_text": "equitas"
+          }
+        },
+        "logo_qgA4CX": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Prime_Book.avif",
+            "link": "",
+            "alt_text": "prime book"
+          }
+        }
+      },
+      "block_order": [
+        "logo_zJhx79",
+        "logo_J8arnw",
+        "logo_GNLWUt",
+        "logo_MMhU4K",
+        "logo_zLKmRi",
+        "logo_qgA4CX"
+      ],
+      "name": "AK Logo Slider",
+      "settings": {
+        "heading": "Trusted by Leading Brands",
+        "color_scheme": "",
+        "logo_width": 120,
+        "scroll_speed": 25,
+        "pause_on_hover": true,
+        "enable_grayscale": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "ak_image_banner_h9KVKE",
     "ak_slideshow_jc6E6w",
     "image_with_text_he3pfR",
-    "featured_collection"
+    "featured_collection",
+    "ak_logo_slider_dcQEKQ"
   ]
 }
