@@ -269,7 +269,7 @@
         "logo_width": 140,
         "scroll_speed": 25,
         "pause_on_hover": true,
-        "show_arrows": false,
+        "show_arrows": true,
         "show_dots": true,
         "enable_grayscale": true,
         "padding_top": 36,
