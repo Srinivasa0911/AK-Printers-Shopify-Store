@@ -438,7 +438,7 @@
         "heading": "Our Valued Clientele",
         "color_scheme": "",
         "logo_width": 120,
-        "scroll_speed": 25,
+        "scroll_speed": 60,
         "pause_on_hover": false,
         "enable_grayscale": false,
         "padding_top": 36,
