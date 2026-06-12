@@ -214,6 +214,102 @@
     "ak_logo_slider_dcQEKQ": {
       "type": "ak-logo-slider",
       "blocks": {
+        "logo_Qzqi8a": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Technip.avif",
+            "link": "",
+            "alt_text": "technip energies"
+          }
+        },
+        "logo_3M3f6W": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Pattapas.avif",
+            "link": "",
+            "alt_text": "pattappas"
+          }
+        },
+        "logo_TqCKQX": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Fortis.avif",
+            "link": "",
+            "alt_text": "fortis"
+          }
+        },
+        "logo_P7w3p8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Kia_Motor.avif",
+            "link": "",
+            "alt_text": "kia motors"
+          }
+        },
+        "logo_h6DpDW": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Grundfos.avif",
+            "link": "",
+            "alt_text": "grundfos"
+          }
+        },
+        "logo_4bzDP7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Kavery_Hospital.avif",
+            "link": "",
+            "alt_text": "kauvery hospital"
+          }
+        },
+        "logo_GtbrqF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tekion.avif",
+            "link": "",
+            "alt_text": "tekion"
+          }
+        },
+        "logo_wDCn38": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Hinduja.avif",
+            "link": "",
+            "alt_text": "hindijja leyland finance"
+          }
+        },
+        "logo_i8XzBh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Paragidm.avif",
+            "link": "",
+            "alt_text": "paradigm"
+          }
+        },
+        "logo_KGiycf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Subabhi.avif",
+            "link": "",
+            "alt_text": "surabhi score"
+          }
+        },
+        "logo_jVBdC3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/CP_Plus.avif",
+            "link": "",
+            "alt_text": "cp plus"
+          }
+        },
+        "logo_6zkHUy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Ciklum.avif",
+            "link": "",
+            "alt_text": "ciklum"
+          }
+        },
         "logo_jCzwQz": {
           "type": "logo",
           "settings": {
@@ -312,6 +408,18 @@
         }
       },
       "block_order": [
+        "logo_Qzqi8a",
+        "logo_3M3f6W",
+        "logo_TqCKQX",
+        "logo_P7w3p8",
+        "logo_h6DpDW",
+        "logo_4bzDP7",
+        "logo_GtbrqF",
+        "logo_wDCn38",
+        "logo_i8XzBh",
+        "logo_KGiycf",
+        "logo_jVBdC3",
+        "logo_6zkHUy",
         "logo_jCzwQz",
         "logo_QMmjHh",
         "logo_YnpDp9",
