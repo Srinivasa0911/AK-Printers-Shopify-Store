@@ -444,6 +444,69 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "logo_slider_ak_B4E4km": {
+      "type": "logo-slider-ak",
+      "blocks": {
+        "logo_UCKrTb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Prime_Book.avif",
+            "link": "",
+            "alt_text": "Primebook"
+          }
+        },
+        "logo_7J7HcJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/equitas.avif",
+            "link": "",
+            "alt_text": "equitas"
+          }
+        },
+        "logo_dBbDy8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Hidesign.avif",
+            "link": "",
+            "alt_text": "Hide Sign"
+          }
+        },
+        "logo_PGJzTD": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/happyherbs.avif",
+            "link": "",
+            "alt_text": "Happy Herbs"
+          }
+        },
+        "logo_94HqL4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Urban.avif",
+            "link": "",
+            "alt_text": "Urban"
+          }
+        }
+      },
+      "block_order": [
+        "logo_UCKrTb",
+        "logo_7J7HcJ",
+        "logo_dBbDy8",
+        "logo_PGJzTD",
+        "logo_94HqL4"
+      ],
+      "name": "AK Logo Slider",
+      "settings": {
+        "heading": "Trusted by Leading Brands",
+        "color_scheme": "",
+        "logo_width": 140,
+        "scroll_speed": 25,
+        "pause_on_hover": true,
+        "enable_grayscale": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -451,6 +514,7 @@
     "ak_slideshow_jc6E6w",
     "image_with_text_he3pfR",
     "featured_collection",
-    "ak_logo_slider_dcQEKQ"
+    "ak_logo_slider_dcQEKQ",
+    "logo_slider_ak_B4E4km"
   ]
 }
