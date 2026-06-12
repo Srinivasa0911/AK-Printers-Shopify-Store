@@ -268,7 +268,7 @@
       "name": "AK Logo Carousel",
       "settings": {
         "heading": "Trusted by Leading Brands",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "logo_width": 140,
         "scroll_speed": 25,
         "pause_on_hover": true,
