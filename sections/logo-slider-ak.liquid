@@ -77,31 +77,29 @@
       </div>
     </div>
 
+  {% if section.settings.show_arrows or section.settings.show_dots %}
+  <div class="ak-logo-navigation">
+
     {% if section.settings.show_arrows %}
-  <div class="ak-logo-arrows">
-    <button
-      type="button"
-      class="ak-logo-arrow ak-logo-arrow--prev"
-      aria-label="Previous"
-    >
-      {{ 'icon-caret.svg' | inline_asset_content }}
-    </button>
+      <button class="ak-logo-arrow" type="button">
+        ←
+      </button>
+    {% endif %}
 
-    <button
-      type="button"
-      class="ak-logo-arrow ak-logo-arrow--next"
-      aria-label="Next"
-    >
-      {{ 'icon-caret.svg' | inline_asset_content }}
-    </button>
-  </div>
-  {% endif %}
+    {% if section.settings.show_dots %}
+      <div class="ak-logo-dots">
+        {% for block in section.blocks %}
+          <span class="ak-logo-dot"></span>
+        {% endfor %}
+      </div>
+    {% endif %}
 
-  {% if section.settings.show_dots %}
-  <div class="ak-logo-dots">
-    {% for block in section.blocks %}
-      <span class="ak-logo-dot"></span>
-    {% endfor %}
+    {% if section.settings.show_arrows %}
+      <button class="ak-logo-arrow" type="button">
+        →
+      </button>
+    {% endif %}
+
   </div>
 {% endif %}
 

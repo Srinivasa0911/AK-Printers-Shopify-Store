@@ -192,42 +192,47 @@ width: calc(var(--logo-width) * 0.8);
 }
 }
 
-.ak-logo-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+.ak-logo-navigation{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-top:25px;
 }
 
-.ak-logo-arrow {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  color: rgb(var(--color-foreground));
+.ak-logo-arrows{
+    display:flex;
+    gap:12px;
 }
 
-.ak-logo-arrow svg {
-  width: 1.6rem;
-  height: 1.6rem;
+.ak-logo-arrow{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(var(--color-foreground),0.2);
+    border-radius:50%;
+    background:transparent;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    color:rgb(var(--color-foreground));
 }
 
-.ak-logo-dots {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.ak-logo-dots{
+    display:flex;
+    gap:10px;
 }
 
-.ak-logo-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(var(--color-foreground), 0.3);
+.ak-logo-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(var(--color-foreground),0.3);
 }
 
-.ak-logo-dot:first-child {
-  background: rgb(var(--color-foreground));
+.ak-logo-dot:first-child{
+    background:rgb(var(--color-foreground));
 }
 
 @media screen and (max-width: 749px) {
