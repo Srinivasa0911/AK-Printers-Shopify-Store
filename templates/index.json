@@ -211,60 +211,63 @@
         "padding_bottom": 36
       }
     },
-    "logo_slider_ak_B4E4km": {
+    "logo_slider_ak_iAPpKC": {
       "type": "logo-slider-ak",
       "blocks": {
-        "logo_UCKrTb": {
+        "logo_ADg4bq": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Prime_Book.avif",
             "link": "",
-            "alt_text": "Primebook"
+            "alt_text": "Brand Logo"
           }
         },
-        "logo_7J7HcJ": {
+        "logo_9BQLPD": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/equitas.avif",
             "link": "",
-            "alt_text": "equitas"
+            "alt_text": "Brand Logo"
           }
         },
-        "logo_dBbDy8": {
+        "logo_kEz7Lt": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Hidesign.avif",
             "link": "",
-            "alt_text": "Hide Sign"
+            "alt_text": "Brand Logo"
           }
         },
-        "logo_PGJzTD": {
+        "logo_AkWqNQ": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/happyherbs.avif",
             "link": "",
-            "alt_text": "Happy Herbs"
+            "alt_text": "Brand Logo"
           }
         },
-        "logo_94HqL4": {
+        "logo_hUanf6": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Urban.avif",
             "link": "",
-            "alt_text": "Urban"
+            "alt_text": "Brand Logo"
+          }
+        },
+        "logo_jxRGjf": {
+          "type": "logo",
+          "settings": {
+            "link": "",
+            "alt_text": "Brand Logo"
           }
         }
       },
       "block_order": [
-        "logo_UCKrTb",
-        "logo_7J7HcJ",
-        "logo_dBbDy8",
-        "logo_PGJzTD",
-        "logo_94HqL4"
+        "logo_ADg4bq",
+        "logo_9BQLPD",
+        "logo_kEz7Lt",
+        "logo_AkWqNQ",
+        "logo_hUanf6",
+        "logo_jxRGjf"
       ],
-      "name": "AK Logo Slider",
+      "name": "AK Logo Carousel",
       "settings": {
-        "heading": "Our Valued Clientele",
+        "heading": "Trusted by Leading Brands",
         "color_scheme": "",
         "logo_width": 140,
         "scroll_speed": 25,
@@ -275,7 +278,7 @@
         "arrow_border_color": "#dddddd",
         "show_dots": true,
         "dot_color": "#cccccc",
-        "active_dot_color": "#2b2a29",
+        "active_dot_color": "#000000",
         "enable_grayscale": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -287,6 +290,6 @@
     "ak_slideshow_jc6E6w",
     "image_with_text_he3pfR",
     "featured_collection",
-    "logo_slider_ak_B4E4km"
+    "logo_slider_ak_iAPpKC"
   ]
 }
