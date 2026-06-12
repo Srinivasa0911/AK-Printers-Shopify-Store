@@ -214,6 +214,54 @@
     "ak_logo_slider_dcQEKQ": {
       "type": "ak-logo-slider",
       "blocks": {
+        "logo_jCzwQz": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/VBJ.avif",
+            "link": "",
+            "alt_text": "vbj"
+          }
+        },
+        "logo_QMmjHh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Royal_Enfield.avif",
+            "link": "",
+            "alt_text": "royal enfield"
+          }
+        },
+        "logo_YnpDp9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Zoho.avif",
+            "link": "",
+            "alt_text": "zoho"
+          }
+        },
+        "logo_HCmThF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Chennai_Mobiles.avif",
+            "link": "",
+            "alt_text": "chennai mobiles"
+          }
+        },
+        "logo_8DYzDB": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Tikitora.avif",
+            "link": "",
+            "alt_text": "tikitoro"
+          }
+        },
+        "logo_CUHWnr": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/anadha_bhavan.avif",
+            "link": "",
+            "alt_text": "anandha bhavan"
+          }
+        },
         "logo_zJhx79": {
           "type": "logo",
           "settings": {
@@ -264,6 +312,12 @@
         }
       },
       "block_order": [
+        "logo_jCzwQz",
+        "logo_QMmjHh",
+        "logo_YnpDp9",
+        "logo_HCmThF",
+        "logo_8DYzDB",
+        "logo_CUHWnr",
         "logo_zJhx79",
         "logo_J8arnw",
         "logo_GNLWUt",
