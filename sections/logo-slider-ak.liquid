@@ -78,7 +78,13 @@
     </div>
 
   {% if section.settings.show_arrows or section.settings.show_dots %}
-  <div class="ak-logo-navigation">
+  <div class="ak-logo-navigation" style="
+    --arrow-color: {{ section.settings.arrow_color }};
+    --arrow-bg: {{ section.settings.arrow_bg_color }};
+    --arrow-border: {{ section.settings.arrow_border_color }};
+    --dot-color: {{ section.settings.dot_color }};
+    --active-dot-color: {{ section.settings.active_dot_color }};
+  ">
 
     {% if section.settings.show_arrows %}
       <button class="ak-logo-arrow" type="button">
@@ -162,10 +168,40 @@
   "default": true
 },
 {
+  "type": "color",
+  "id": "arrow_color",
+  "label": "Arrow Icon Color",
+  "default": "#000000"
+},
+{
+  "type": "color",
+  "id": "arrow_bg_color",
+  "label": "Arrow Background Color",
+  "default": "#ffffff"
+},
+{
+  "type": "color",
+  "id": "arrow_border_color",
+  "label": "Arrow Border Color",
+  "default": "#dddddd"
+},
+{
   "type": "checkbox",
   "id": "show_dots",
   "label": "Show Dot Navigation",
   "default": true
+},
+{
+  "type": "color",
+  "id": "dot_color",
+  "label": "Dot Color",
+  "default": "#cccccc"
+},
+{
+  "type": "color",
+  "id": "active_dot_color",
+  "label": "Active Dot Color",
+  "default": "#000000"
 },
     {
       "type": "checkbox",
