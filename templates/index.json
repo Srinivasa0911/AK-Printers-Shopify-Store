@@ -264,7 +264,7 @@
       ],
       "name": "AK Logo Slider",
       "settings": {
-        "heading": "Trusted by Leading Brands",
+        "heading": "Our Valued Clientele",
         "color_scheme": "",
         "logo_width": 140,
         "scroll_speed": 25,
@@ -276,7 +276,7 @@
         "show_dots": true,
         "dot_color": "#cccccc",
         "active_dot_color": "#2b2a29",
-        "enable_grayscale": true,
+        "enable_grayscale": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
