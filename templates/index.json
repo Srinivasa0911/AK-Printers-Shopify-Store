@@ -270,7 +270,12 @@
         "scroll_speed": 25,
         "pause_on_hover": true,
         "show_arrows": true,
+        "arrow_color": "#000000",
+        "arrow_bg_color": "#ffffff",
+        "arrow_border_color": "#dddddd",
         "show_dots": true,
+        "dot_color": "#cccccc",
+        "active_dot_color": "#2b2a29",
         "enable_grayscale": true,
         "padding_top": 36,
         "padding_bottom": 36
