@@ -107,7 +107,8 @@ background:#000!important;
   display: none;
 }
 
-/** Logo Slider CSS */
+/** Logo Slider */
+
 .ak-logo-slider {
 padding-top: {{ section.settings.padding_top }}px;
 padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -115,6 +116,7 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
 
 .ak-logo-marquee {
 overflow: hidden;
+position: relative;
 width: 100%;
 }
 
@@ -122,50 +124,70 @@ width: 100%;
 display: flex;
 align-items: center;
 width: max-content;
-animation: akLogoScroll var(--scroll-speed) linear infinite;
+animation: ak-logo-scroll var(--scroll-speed) linear infinite;
 }
 
 .ak-logo-item {
 flex-shrink: 0;
-padding: 0 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 30px;
 }
 
-.ak-logo-item img {
+.ak-logo-item img,
+.ak-logo-placeholder {
 width: var(--logo-width);
 height: auto;
 display: block;
-
-{% if section.settings.enable_grayscale %}
-filter: grayscale(100%);
-{% endif %}
-
 transition: all 0.3s ease;
 }
 
-{% if section.settings.enable_grayscale %}
-.ak-logo-item img:hover {
-filter: grayscale(0%);
+.ak-logo-placeholder {
+background: rgba(0,0,0,.05);
+aspect-ratio: 2.5 / 1;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-{% endif %}
 
-{% if section.settings.pause_on_hover %}
-.ak-logo-marquee:hover .ak-logo-track {
+/* Pause on hover */
+.ak-logo-marquee.pause-on-hover:hover .ak-logo-track {
 animation-play-state: paused;
 }
-{% endif %}
 
-@keyframes akLogoScroll {
-from{
+/* Grayscale */
+.ak-logo-marquee.enable-grayscale img {
+filter: grayscale(100%);
+}
+
+.ak-logo-marquee.enable-grayscale img:hover {
+filter: grayscale(0%);
+}
+
+@keyframes ak-logo-scroll {
+from {
 transform: translateX(0);
 }
 
-to{
+to {
 transform: translateX(-50%);
 }
 }
 
+@media screen and (max-width: 989px) {
+.ak-logo-item {
+padding: 0 20px;
+}
+}
+
 @media screen and (max-width: 749px) {
-.ak-logo-item img {
-width: calc(var(--logo-width) * 0.75);
+.ak-logo-item {
+padding: 0 15px;
+}
+
+.ak-logo-item img,
+.ak-logo-placeholder {
+width: calc(var(--logo-width) * 0.8);
 }
 }
