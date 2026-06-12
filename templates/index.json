@@ -283,6 +283,75 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "ak_counter_section_KGcmD6": {
+      "type": "ak-counter-section",
+      "blocks": {
+        "counter_wWMLXh": {
+          "type": "counter",
+          "settings": {
+            "prefix": "",
+            "target_number": 100,
+            "suffix": "+",
+            "label": "Happy Customers Served",
+            "subtext": "Across active verified store channels."
+          }
+        },
+        "counter_eWHPix": {
+          "type": "counter",
+          "settings": {
+            "prefix": "",
+            "target_number": 15,
+            "suffix": "K+",
+            "label": "Community Members",
+            "subtext": "Across active verified store channels."
+          }
+        },
+        "counter_xyFqtg": {
+          "type": "counter",
+          "settings": {
+            "prefix": "",
+            "target_number": 99,
+            "suffix": "%",
+            "label": "Positive Feedback",
+            "subtext": "Across active verified store channels."
+          }
+        },
+        "counter_fxx38B": {
+          "type": "counter",
+          "settings": {
+            "prefix": "",
+            "target_number": 24,
+            "suffix": "/7",
+            "label": "Customer Support Response",
+            "subtext": "Across active verified store channels."
+          }
+        }
+      },
+      "block_order": [
+        "counter_wWMLXh",
+        "counter_eWHPix",
+        "counter_xyFqtg",
+        "counter_fxx38B"
+      ],
+      "name": "Advanced Counter Section",
+      "settings": {
+        "title": "Our Performance Metrics",
+        "heading_size": "h1",
+        "subtitle": "",
+        "heading_alignment": "center",
+        "columns_desktop": 4,
+        "number_size": 4.5,
+        "animation_duration": 2000,
+        "bg_color": "#ffffff",
+        "text_color": "#121212",
+        "accent_color": "#334155",
+        "container_width": 1200,
+        "padding_top_desktop": 60,
+        "padding_bottom_desktop": 60,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
     }
   },
   "order": [
@@ -290,6 +359,7 @@
     "ak_slideshow_jc6E6w",
     "image_with_text_he3pfR",
     "featured_collection",
-    "logo_slider_ak_iAPpKC"
+    "logo_slider_ak_iAPpKC",
+    "ak_counter_section_KGcmD6"
   ]
 }
