@@ -175,19 +175,15 @@
     gap: 1.5rem;
   }
 
-  /* Payment Icons */
+  /* Payment Image */
   .adv-footer__payment {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
   .adv-footer__payment-img {
     display: block;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
   }
@@ -307,21 +303,15 @@
           {%- endif -%}
         </div>
 
-        <!-- Right Side: Custom Uploaded Payment Icons -->
+        <!-- Right Side: Single Uploaded Payment Image -->
         {%- if section.settings.show_payment_icons -%}
           <div class="adv-footer__payment-container">
             <span class="visually-hidden">Supported payment methods</span>
-            <ul class="adv-footer__payment">
-              {%- for i in (1..6) -%}
-                {%- assign payment_key = 'payment_icon_' | append: i -%}
-                {%- assign payment_img = section.settings[payment_key] -%}
-                {%- if payment_img != blank -%}
-                  <li class="adv-footer__payment-item">
-                    {{ payment_img | image_url: width: section.settings.payment_icon_width | image_tag: class: 'adv-footer__payment-img', style: "width: " | append: section.settings.payment_icon_width | append: "px;", loading: 'lazy', alt: payment_img.alt | default: 'Payment Icon' | escape }}
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            </ul>
+            <div class="adv-footer__payment">
+              {%- if section.settings.payment_image != blank -%}
+                {{ section.settings.payment_image | image_url: width: section.settings.payment_image_width | image_tag: class: 'adv-footer__payment-img', style: "width: " | append: section.settings.payment_image_width | append: "px;", loading: 'lazy', alt: section.settings.payment_image.alt | default: 'Payment Methods' | escape }}
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
         
@@ -410,50 +400,26 @@
     },
     {
       "type": "header",
-      "content": "Custom Payment Icons"
+      "content": "Custom Payment Image"
     },
     {
       "type": "checkbox",
       "id": "show_payment_icons",
-      "label": "Show payment icons",
+      "label": "Show payment image",
       "default": true
     },
     {
       "type": "range",
-      "id": "payment_icon_width",
-      "min": 20, "max": 80, "step": 2,
-      "default": 38, "unit": "px",
-      "label": "Payment Icon Width"
+      "id": "payment_image_width",
+      "min": 50, "max": 400, "step": 10,
+      "default": 250, "unit": "px",
+      "label": "Payment Image Width"
     },
     {
       "type": "image_picker",
-      "id": "payment_icon_1",
-      "label": "Payment Icon 1"
-    },
-    {
-      "type": "image_picker",
-      "id": "payment_icon_2",
-      "label": "Payment Icon 2"
-    },
-    {
-      "type": "image_picker",
-      "id": "payment_icon_3",
-      "label": "Payment Icon 3"
-    },
-    {
-      "type": "image_picker",
-      "id": "payment_icon_4",
-      "label": "Payment Icon 4"
-    },
-    {
-      "type": "image_picker",
-      "id": "payment_icon_5",
-      "label": "Payment Icon 5"
-    },
-    {
-      "type": "image_picker",
-      "id": "payment_icon_6",
-      "label": "Payment Icon 6"
+      "id": "payment_image",
+      "label": "Payment Methods Image",
+      "info": "Upload a single banner image containing all your payment icons (e.g., Visa, Mastercard, PayPal)."
     },
     {
       "type": "header",
