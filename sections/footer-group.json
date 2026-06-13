@@ -11,25 +11,68 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "ak_custom_footer_c9LwNk": {
+      "type": "ak-custom-footer",
+      "blocks": {
+        "logo_4EErfQ": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "description": "<p>Providing the best products for our customers worldwide.</p>"
+          }
+        },
+        "location_D8cXVM": {
+          "type": "location",
+          "settings": {
+            "heading": "Our Location",
+            "show_icon": true,
+            "address": "<p>123 Commerce Blvd<br>Suite 100<br>New York, NY 10001</p>"
+          }
+        },
+        "phone_gArxdd": {
+          "type": "phone",
+          "settings": {
+            "heading": "Call Us",
+            "show_icon": true,
+            "phone_number": "+1 (555) 123-4567"
+          }
+        },
+        "email_z9W9NA": {
+          "type": "email",
+          "settings": {
+            "heading": "Email Us",
+            "show_icon": true,
+            "email_address": "support@yourstore.com"
+          }
+        }
+      },
+      "block_order": [
+        "logo_4EErfQ",
+        "location_D8cXVM",
+        "phone_gArxdd",
+        "email_z9W9NA"
+      ],
+      "name": "Advanced Footer",
+      "settings": {
+        "bg_color": "#111827",
+        "heading_color": "#ffffff",
+        "text_color": "#9ca3af",
+        "icon_color": "#60a5fa",
+        "border_color": "#1f2937",
+        "container_width": 1200,
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40
+      }
+    },
     "footer": {
       "type": "footer",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_policy": true,
-        "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "settings": {}
     }
   },
   "order": [
+    "ak_custom_footer_c9LwNk",
     "footer"
   ]
 }
