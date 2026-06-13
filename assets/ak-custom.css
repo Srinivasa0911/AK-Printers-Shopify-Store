@@ -273,3 +273,11 @@ width: calc(var(--logo-width) * 0.8);
 .ak-logo-dot:first-child{
     background: var(--active-dot-color);
 }
+
+/** Footer Copyright CSS */
+
+.policies li{
+display: inline-block;
+justify-content: center;
+align-items: center;
+}
