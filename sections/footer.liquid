@@ -219,8 +219,9 @@
                   {%- assign link = block.settings[link_key] -%}
                   
                   {%- if icon != blank and link != blank -%}
+                    {%- assign icon_style = 'width: ' | append: block.settings.social_icon_width | append: 'px;' -%}
                     <a href="{{ link }}" class="adv-footer__social-link" target="_blank" rel="noopener noreferrer">
-                      {{ icon | image_url: width: block.settings.social_icon_width | image_tag: class: 'adv-footer__social-img', style: "width: " | append: block.settings.social_icon_width | append: "px;", loading: 'lazy', alt: "Social Icon" }}
+                      {{ icon | image_url: width: block.settings.social_icon_width | image_tag: class: 'adv-footer__social-img', style: icon_style, loading: 'lazy', alt: 'Social Icon' }}
                     </a>
                   {%- endif -%}
                 {%- endfor -%}
@@ -309,7 +310,9 @@
             <span class="visually-hidden">Supported payment methods</span>
             <div class="adv-footer__payment">
               {%- if section.settings.payment_image != blank -%}
-                {{ section.settings.payment_image | image_url: width: section.settings.payment_image_width | image_tag: class: 'adv-footer__payment-img', style: "width: " | append: section.settings.payment_image_width | append: "px;", loading: 'lazy', alt: section.settings.payment_image.alt | default: 'Payment Methods' | escape }}
+                {%- assign payment_style = 'width: ' | append: section.settings.payment_image_width | append: 'px;' -%}
+                {%- assign payment_alt = section.settings.payment_image.alt | default: 'Payment Methods' -%}
+                {{ section.settings.payment_image | image_url: width: section.settings.payment_image_width | image_tag: class: 'adv-footer__payment-img', style: payment_style, loading: 'lazy', alt: payment_alt }}
               {%- endif -%}
             </div>
           </div>
