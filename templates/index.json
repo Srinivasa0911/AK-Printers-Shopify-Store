@@ -291,40 +291,40 @@
           "type": "counter",
           "settings": {
             "prefix": "",
-            "target_number": 100,
+            "target_number": 5000,
             "suffix": "+",
-            "label": "Happy Customers Served",
-            "subtext": "Across active verified store channels."
+            "label": "Projects Done",
+            "subtext": ""
           }
         },
         "counter_eWHPix": {
           "type": "counter",
           "settings": {
             "prefix": "",
-            "target_number": 15,
-            "suffix": "K+",
-            "label": "Community Members",
-            "subtext": "Across active verified store channels."
+            "target_number": 500,
+            "suffix": "+",
+            "label": "Happy Customers",
+            "subtext": ""
           }
         },
         "counter_xyFqtg": {
           "type": "counter",
           "settings": {
             "prefix": "",
-            "target_number": 99,
-            "suffix": "%",
-            "label": "Positive Feedback",
-            "subtext": "Across active verified store channels."
+            "target_number": 120,
+            "suffix": "+",
+            "label": "Experts Team",
+            "subtext": ""
           }
         },
         "counter_fxx38B": {
           "type": "counter",
           "settings": {
             "prefix": "",
-            "target_number": 24,
-            "suffix": "/7",
-            "label": "Customer Support Response",
-            "subtext": "Across active verified store channels."
+            "target_number": 20,
+            "suffix": "+",
+            "label": "Years of Experience",
+            "subtext": ""
           }
         }
       },
@@ -336,7 +336,7 @@
       ],
       "name": "Advanced Counter Section",
       "settings": {
-        "title": "Our Performance Metrics",
+        "title": "Our Achievements",
         "heading_size": "h1",
         "subtitle": "",
         "heading_alignment": "center",
@@ -346,7 +346,7 @@
         "bg_color": "#ffffff",
         "text_color": "#121212",
         "accent_color": "#334155",
-        "container_width": 1200,
+        "container_width": 1400,
         "padding_top_desktop": 60,
         "padding_bottom_desktop": 60,
         "padding_top_mobile": 40,
