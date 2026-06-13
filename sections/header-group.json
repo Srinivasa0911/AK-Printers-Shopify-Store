@@ -102,11 +102,21 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "whatsappchat_yP7wBt": {
+      "type": "whatsappchat",
+      "name": "Whatsapp Button",
+      "settings": {
+        "show_whatsapp": true,
+        "whatsapp_number": "+91 99414 54731",
+        "whatsapp_msg": "Call Us"
+      }
     }
   },
   "order": [
     "ak_announcement_bar_HQmywm",
     "announcement-bar",
-    "header"
+    "header",
+    "whatsappchat_yP7wBt"
   ]
 }
