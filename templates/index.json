@@ -284,66 +284,70 @@
         "padding_bottom": 36
       }
     },
-    "ak_counter_section_KGcmD6": {
-      "type": "ak-counter-section",
+    "counter_section_ak_wbgcep": {
+      "type": "counter-section-ak",
       "blocks": {
-        "counter_wWMLXh": {
+        "counter_J4QmFY": {
           "type": "counter",
           "settings": {
+            "icon_width": 45,
             "prefix": "",
-            "target_number": 5000,
+            "target_number": 100,
             "suffix": "+",
-            "label": "Projects Done",
-            "subtext": ""
+            "label": "Happy Customers Served",
+            "subtext": "Across active verified store channels."
           }
         },
-        "counter_eWHPix": {
+        "counter_jUHqYG": {
           "type": "counter",
           "settings": {
+            "icon_width": 45,
             "prefix": "",
-            "target_number": 500,
-            "suffix": "+",
-            "label": "Happy Customers",
-            "subtext": ""
+            "target_number": 15,
+            "suffix": "K+",
+            "label": "Community Members",
+            "subtext": "Across active verified store channels."
           }
         },
-        "counter_xyFqtg": {
+        "counter_cHFehn": {
           "type": "counter",
           "settings": {
+            "icon_width": 45,
             "prefix": "",
-            "target_number": 120,
-            "suffix": "+",
-            "label": "Experts Team",
-            "subtext": ""
+            "target_number": 99,
+            "suffix": "%",
+            "label": "Positive Feedback",
+            "subtext": "Across active verified store channels."
           }
         },
-        "counter_fxx38B": {
+        "counter_Hr6hUG": {
           "type": "counter",
           "settings": {
+            "icon_width": 45,
             "prefix": "",
-            "target_number": 20,
-            "suffix": "+",
-            "label": "Years of Experience",
-            "subtext": ""
+            "target_number": 24,
+            "suffix": "/7",
+            "label": "Customer Support Response",
+            "subtext": "Across active verified store channels."
           }
         }
       },
       "block_order": [
-        "counter_wWMLXh",
-        "counter_eWHPix",
-        "counter_xyFqtg",
-        "counter_fxx38B"
+        "counter_J4QmFY",
+        "counter_jUHqYG",
+        "counter_cHFehn",
+        "counter_Hr6hUG"
       ],
-      "name": "Advanced Counter Section",
+      "name": "Advanced Counter Stats",
       "settings": {
-        "title": "Our Achievements",
+        "title": "Our Performance Metrics",
         "heading_size": "h1",
         "subtitle": "",
         "heading_alignment": "center",
         "columns_desktop": 4,
         "number_size": 4.5,
         "animation_duration": 2000,
-        "bg_color": "#ffffff",
+        "bg_color": "#F7F7F7",
         "text_color": "#121212",
         "accent_color": "#334155",
         "container_width": 1400,
@@ -401,7 +405,7 @@
     "image_with_text_he3pfR",
     "featured_collection",
     "logo_slider_ak_iAPpKC",
-    "ak_counter_section_KGcmD6",
+    "counter_section_ak_wbgcep",
     "collection_list_CYmgFw"
   ]
 }
