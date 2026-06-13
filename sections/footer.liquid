@@ -46,44 +46,13 @@
     align-items: flex-start;
   }
 
-  /* Typography Styles from Settings */
   .adv-footer__heading {
     color: {{ section.settings.heading_color }};
-    font-size: {{ section.settings.heading_size }}px;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-  }
-
-  .adv-footer__text {
-    font-size: {{ section.settings.text_size }}px;
-    line-height: 1.6;
-    color: {{ section.settings.text_color }};
-  }
-
-  /* Link Styles */
-  .adv-footer__link {
-    color: {{ section.settings.link_color }};
-    font-size: {{ section.settings.link_size }}px;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-    line-height: 1.6;
-  }
-  
-  .adv-footer__link:hover {
-    opacity: 0.7;
-    text-decoration: underline;
-  }
-
-  /* Menu Block Styles */
-  .adv-footer__menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
   }
 
   /* Logo & Social Styles */
@@ -95,6 +64,11 @@
     display: block;
     max-width: 100%;
     height: auto;
+  }
+  .adv-footer__logo-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.8;
   }
   .adv-footer__socials {
     display: flex;
@@ -116,34 +90,47 @@
     object-fit: contain;
   }
 
-  /* Contact Styles */
+  /* Contact Link Styles */
   .adv-footer__contact-item {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
   }
   
   .adv-footer__contact-icon {
-    width: {{ section.settings.icon_size }}px;
-    height: {{ section.settings.icon_size }}px;
+    width: 20px;
+    height: 20px;
     fill: {{ section.settings.icon_color }};
     flex-shrink: 0;
     margin-top: 2px;
   }
 
-  /* Bottom Copyright, Legal & Payment Bar */
+  .adv-footer__contact-link {
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .adv-footer__contact-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+
+  /* Bottom Copyright & Legal Bar */
   .adv-footer__bottom {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid {{ section.settings.border_color }};
+    opacity: 0.8;
   }
   
   .adv-footer__bottom-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: center;
   }
   
@@ -155,39 +142,27 @@
     }
   }
 
-  .adv-footer__legal-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  .adv-footer__copyright {
+    font-size: 1.3rem;
   }
 
-  @media screen and (min-width: 750px) {
-    .adv-footer__legal-group {
-      align-items: flex-start;
-    }
-  }
-
-  .adv-footer__legal-links {
+  .adv-footer__legal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    font-size: 1.3rem;
   }
 
-  /* Payment Icons */
-  .adv-footer__payment {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .adv-footer__legal a {
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    transition: opacity 0.3s ease;
   }
-  .adv-footer__payment-item svg {
-    width: 38px;
-    height: 24px;
+
+  .adv-footer__legal a:hover {
+    opacity: 0.6;
+    text-decoration: underline;
   }
 {%- endstyle -%}
 
@@ -210,7 +185,7 @@
               {%- endif -%}
               
               {%- if block.settings.description != blank -%}
-                <div class="adv-footer__text" style="opacity: 0.8;">{{ block.settings.description }}</div>
+                <div class="adv-footer__logo-text">{{ block.settings.description }}</div>
               {%- endif -%}
 
               <div class="adv-footer__socials">
@@ -228,18 +203,6 @@
                 {%- endfor -%}
               </div>
 
-            {%- when 'link_list' -%}
-              {%- if block.settings.heading != blank -%}
-                <h3 class="adv-footer__heading">{{ block.settings.heading | escape }}</h3>
-              {%- endif -%}
-              {%- if block.settings.menu != blank -%}
-                <ul class="adv-footer__menu">
-                  {%- for link in block.settings.menu.links -%}
-                    <li><a href="{{ link.url }}" class="adv-footer__link">{{ link.title }}</a></li>
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-
             {%- when 'location' -%}
               {%- if block.settings.heading != blank -%}
                 <h3 class="adv-footer__heading">{{ block.settings.heading | escape }}</h3>
@@ -248,7 +211,7 @@
                 {%- if block.settings.show_icon -%}
                   <svg class="adv-footer__contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                 {%- endif -%}
-                <div class="adv-footer__text">{{ block.settings.address }}</div>
+                <div>{{ block.settings.address }}</div>
               </div>
 
             {%- when 'phone' -%}
@@ -259,7 +222,7 @@
                 {%- if block.settings.show_icon -%}
                   <svg class="adv-footer__contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                 {%- endif -%}
-                <a href="tel:{{ block.settings.phone_number | replace: ' ', '' }}" class="adv-footer__link">
+                <a href="tel:{{ block.settings.phone_number | replace: ' ', '' }}" class="adv-footer__contact-link">
                   {{ block.settings.phone_number | escape }}
                 </a>
               </div>
@@ -272,7 +235,7 @@
                 {%- if block.settings.show_icon -%}
                   <svg class="adv-footer__contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 {%- endif -%}
-                <a href="mailto:{{ block.settings.email_address }}" class="adv-footer__link">
+                <a href="mailto:{{ block.settings.email_address }}" class="adv-footer__contact-link">
                   {{ block.settings.email_address | escape }}
                 </a>
               </div>
@@ -282,43 +245,24 @@
       {%- endfor -%}
     </div>
 
-    <!-- Bottom Copyright, Legal & Payment -->
+    <!-- Bottom Copyright & Legal Section -->
     <div class="adv-footer__bottom">
       <div class="adv-footer__bottom-inner">
-        
-        <!-- Left Side: Copyright & Legal -->
-        <div class="adv-footer__legal-group">
-          <div class="adv-footer__text" style="opacity: 0.8;">
-            &copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}. All Rights Reserved.
-          </div>
-          
-          {%- if section.settings.privacy_link != blank or section.settings.terms_link != blank -%}
-            <div class="adv-footer__legal-links">
-              {%- if section.settings.privacy_link != blank -%}
-                <a href="{{ section.settings.privacy_link }}" class="adv-footer__link" style="opacity: 0.8;">{{ section.settings.privacy_text | default: "Privacy Policy" }}</a>
-              {%- endif -%}
-              
-              {%- if section.settings.terms_link != blank -%}
-                <a href="{{ section.settings.terms_link }}" class="adv-footer__link" style="opacity: 0.8;">{{ section.settings.terms_text | default: "Terms & Conditions" }}</a>
-              {%- endif -%}
-            </div>
-          {%- endif -%}
+        <div class="adv-footer__copyright">
+          &copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}. All Rights Reserved.
         </div>
-
-        <!-- Right Side: Payment Icons -->
-        {%- if section.settings.show_payment_icons -%}
-          <div class="adv-footer__payment-container">
-            <span class="visually-hidden">Supported payment methods</span>
-            <ul class="adv-footer__payment">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="adv-footer__payment-item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
+        
+        {%- if section.settings.privacy_link != blank or section.settings.terms_link != blank -%}
+          <div class="adv-footer__legal">
+            {%- if section.settings.privacy_link != blank -%}
+              <a href="{{ section.settings.privacy_link }}">{{ section.settings.privacy_text | default: "Privacy Policy" }}</a>
+            {%- endif -%}
+            
+            {%- if section.settings.terms_link != blank -%}
+              <a href="{{ section.settings.terms_link }}">{{ section.settings.terms_text | default: "Terms & Conditions" }}</a>
+            {%- endif -%}
           </div>
         {%- endif -%}
-        
       </div>
     </div>
     
@@ -328,7 +272,7 @@
 {% schema %}
 {
   "name": "Advanced Footer",
-  "max_blocks": 6,
+  "max_blocks": 4,
   "settings": [
     {
       "type": "header",
@@ -354,12 +298,6 @@
     },
     {
       "type": "color",
-      "id": "link_color",
-      "label": "Link Color",
-      "default": "#d1d5db"
-    },
-    {
-      "type": "color",
       "id": "icon_color",
       "label": "Main Layout Icon Color",
       "default": "#60a5fa"
@@ -369,48 +307,6 @@
       "id": "border_color",
       "label": "Border Line Color",
       "default": "#1f2937"
-    },
-    {
-      "type": "header",
-      "content": "Typography Sizes"
-    },
-    {
-      "type": "range",
-      "id": "heading_size",
-      "min": 12, "max": 24, "step": 1,
-      "default": 16, "unit": "px",
-      "label": "Heading Font Size"
-    },
-    {
-      "type": "range",
-      "id": "text_size",
-      "min": 12, "max": 20, "step": 1,
-      "default": 14, "unit": "px",
-      "label": "Text Font Size"
-    },
-    {
-      "type": "range",
-      "id": "link_size",
-      "min": 12, "max": 20, "step": 1,
-      "default": 14, "unit": "px",
-      "label": "Link Font Size"
-    },
-    {
-      "type": "range",
-      "id": "icon_size",
-      "min": 16, "max": 40, "step": 2,
-      "default": 20, "unit": "px",
-      "label": "Contact Icon Size"
-    },
-    {
-      "type": "header",
-      "content": "Payment Icons"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "Show payment icons",
-      "default": true
     },
     {
       "type": "header",
@@ -527,23 +423,6 @@
       ]
     },
     {
-      "type": "link_list",
-      "name": "Quick Links Menu",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading",
-          "default": "Quick Links"
-        },
-        {
-          "type": "link_list",
-          "id": "menu",
-          "label": "Select Menu"
-        }
-      ]
-    },
-    {
       "type": "location",
       "name": "Location Column",
       "limit": 1,
@@ -624,8 +503,8 @@
       "name": "Advanced Footer",
       "blocks": [
         { "type": "logo" },
-        { "type": "link_list" },
         { "type": "location" },
+        { "type": "phone" },
         { "type": "email" }
       ]
     }
