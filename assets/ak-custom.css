@@ -277,7 +277,7 @@ width: calc(var(--logo-width) * 0.8);
 /** Footer Copyright CSS */
 
 .policies li{
-display: inline-block;
+display: inline-block!important;
 justify-content: center;
 align-items: center;
 }
