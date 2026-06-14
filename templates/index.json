@@ -416,6 +416,12 @@
     "collection_list_CYmgFw": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_xUgFJz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
         "featured_collection_e7GFMb": {
           "type": "featured_collection",
           "settings": {
@@ -454,6 +460,7 @@
         }
       },
       "block_order": [
+        "featured_collection_xUgFJz",
         "featured_collection_e7GFMb",
         "featured_collection_EBLrwi",
         "featured_collection_bFqrwX",
@@ -466,7 +473,7 @@
         "title": "Collections",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 6,
+        "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": true,
         "columns_mobile": "2",
