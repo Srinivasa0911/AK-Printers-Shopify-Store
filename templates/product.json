@@ -90,8 +90,8 @@
         "gallery_layout": "thumbnail",
         "mobile_thumbnails": "show",
         "media_position": "left",
-        "image_zoom": "hover",
-        "hide_variants": true,
+        "image_zoom": "lightbox",
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 12,
         "padding_bottom": 12
