@@ -419,19 +419,19 @@
         "featured_collection_D7kPzf": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         },
         "featured_collection_p4NFbx": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         },
         "featured_collection_gheeCx": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         }
       },
