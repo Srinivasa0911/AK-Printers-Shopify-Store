@@ -451,12 +451,6 @@
           "settings": {
             "collection": "frontpage"
           }
-        },
-        "featured_collection_gheeCx": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
         }
       },
       "block_order": [
@@ -465,8 +459,7 @@
         "featured_collection_bFqrwX",
         "featured_collection_EhgnU3",
         "featured_collection_D7kPzf",
-        "featured_collection_p4NFbx",
-        "featured_collection_gheeCx"
+        "featured_collection_p4NFbx"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
