@@ -15,9 +15,10 @@
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-size: 1.1rem;
     font-weight: 500;
     margin: 0;
+    /* Mobile Font Size */
+    font-size: {{ section.settings.heading_size_mobile }}px;
   }
 
   /* Full Width Marquee Setup */
@@ -43,28 +44,43 @@
     position: relative;
     flex: 0 0 auto;
     width: {{ section.settings.logo_width }}px;
-    margin: 0 {{ section.settings.logo_gap }}px;
+    /* Mobile Gap */
+    margin: 0 calc({{ section.settings.logo_gap_mobile }}px / 2);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* Diamond Separator (Matches Screenshot) */
+  /* Diamond Separator (Mobile Position) */
   {% if section.settings.show_separators %}
     .section-{{ section.id }} .ak-logo-item::after {
       content: '◆';
       position: absolute;
-      right: -{{ section.settings.logo_gap }}px;
+      right: calc(-{{ section.settings.logo_gap_mobile }}px / 2);
       color: {{ section.settings.separator_color }};
       font-size: 8px;
       top: 50%;
       transform: translateY(-50%) translateX(50%);
     }
-    /* Hide separator on the very last item of a track to prevent double diamonds */
     .section-{{ section.id }} .ak-logo-item:last-child::after {
       display: none;
     }
   {% endif %}
+
+  /* Desktop Adjustments */
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }} .ak-logo-heading {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+    }
+    .section-{{ section.id }} .ak-logo-item {
+      margin: 0 calc({{ section.settings.logo_gap_desktop }}px / 2);
+    }
+    {% if section.settings.show_separators %}
+      .section-{{ section.id }} .ak-logo-item::after {
+        right: calc(-{{ section.settings.logo_gap_desktop }}px / 2);
+      }
+    {% endif %}
+  }
 
   /* Static and Hover Image Effects */
   .section-{{ section.id }} .ak-logo-item img,
@@ -151,7 +167,6 @@
     </div>
   {%- endif -%}
 
-  <!-- Full Width Track Container -->
   <div class="ak-logo-marquee{% if section.settings.pause_on_hover %} pause-on-hover{% endif %}">
     <div class="ak-logo-track">
       
@@ -192,7 +207,6 @@
     </div>
   </div>
 
-  <!-- Optional Navigation & Pagination -->
   {%- if section.settings.show_arrows or section.settings.show_dots -%}
     <div class="ak-logo-navigation">
       {%- if section.settings.show_arrows -%}
@@ -233,6 +247,26 @@
       "default": "Trusted By"
     },
     {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading Font Size (Desktop)",
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading Font Size (Mobile)",
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
@@ -246,7 +280,7 @@
     },
     {
       "type": "header",
-      "content": "Logo Styling"
+      "content": "Logo Styling & Spacing"
     },
     {
       "type": "range",
@@ -254,19 +288,29 @@
       "label": "Max Logo Width",
       "min": 50,
       "max": 300,
-      "step": 10,
+      "step": 5,
       "unit": "px",
       "default": 120
     },
     {
       "type": "range",
-      "id": "logo_gap",
-      "label": "Gap Between Logos",
-      "min": 10,
+      "id": "logo_gap_desktop",
+      "label": "Gap Between Logos (Desktop)",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "logo_gap_mobile",
+      "label": "Gap Between Logos (Mobile)",
+      "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 50
+      "default": 30
     },
     {
       "type": "select",
@@ -324,7 +368,7 @@
       "id": "scroll_speed",
       "label": "Scroll Speed",
       "min": 5,
-      "max": 60,
+      "max": 120,
       "step": 1,
       "unit": "s",
       "default": 25
