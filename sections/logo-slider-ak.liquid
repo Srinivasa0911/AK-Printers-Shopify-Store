@@ -12,8 +12,8 @@
 
   .section-{{ section.id }} .ak-logo-heading {
     color: {{ section.settings.heading_color }};
-    text-align: center;
-    letter-spacing: 0.2em;
+    text-align: {{ section.settings.heading_alignment }};
+    letter-spacing: {{ section.settings.heading_letter_spacing }}em;
     text-transform: uppercase;
     font-weight: 500;
     margin: 0;
@@ -241,15 +241,42 @@
       "content": "Section Layout"
     },
     {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F3EFE9"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "Heading",
       "default": "Trusted By"
     },
     {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#5E7783"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
       "type": "range",
       "id": "heading_size_desktop",
-      "label": "Heading Font Size (Desktop)",
+      "label": "Font Size (Desktop)",
       "min": 12,
       "max": 60,
       "step": 1,
@@ -259,7 +286,7 @@
     {
       "type": "range",
       "id": "heading_size_mobile",
-      "label": "Heading Font Size (Mobile)",
+      "label": "Font Size (Mobile)",
       "min": 10,
       "max": 40,
       "step": 1,
@@ -267,16 +294,14 @@
       "default": 14
     },
     {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Background Color",
-      "default": "#F3EFE9"
-    },
-    {
-      "type": "color",
-      "id": "heading_color",
-      "label": "Heading Color",
-      "default": "#5E7783"
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Letter Spacing",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.05,
+      "unit": "em",
+      "default": 0.2
     },
     {
       "type": "header",
