@@ -10,15 +10,15 @@
     margin-bottom: 3rem;
   }
 
-  .section-{{ section.id }} .ak-logo-heading {
-    color: {{ section.settings.heading_color }};
+  .section-{{ section.id }} h2.ak-logo-heading {
+    color: {{ section.settings.heading_color }} !important;
     text-align: {{ section.settings.heading_alignment }};
     letter-spacing: {{ section.settings.heading_letter_spacing }}em;
     text-transform: uppercase;
     font-weight: 500;
     margin: 0;
     /* Mobile Font Size */
-    font-size: {{ section.settings.heading_size_mobile }}px;
+    font-size: {{ section.settings.heading_size_mobile }}px !important;
   }
 
   /* Full Width Marquee Setup */
@@ -68,9 +68,9 @@
   {% endif %}
 
   /* Desktop Adjustments */
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }} .ak-logo-heading {
-      font-size: {{ section.settings.heading_size_desktop }}px;
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }} h2.ak-logo-heading {
+      font-size: {{ section.settings.heading_size_desktop }}px !important;
     }
     .section-{{ section.id }} .ak-logo-item {
       margin: 0 calc({{ section.settings.logo_gap_desktop }}px / 2);
