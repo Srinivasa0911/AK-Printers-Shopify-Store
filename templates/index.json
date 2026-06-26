@@ -502,85 +502,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "logo_slider_ak_xAjVb9": {
-      "type": "logo-slider-ak",
-      "blocks": {
-        "logo_Y9PWwJ": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "logo_VTXrMM": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "logo_rnTNXp": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "logo_PMyVpj": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "logo_VXUXYi": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        },
-        "logo_HCdRGF": {
-          "type": "logo",
-          "settings": {
-            "link": "",
-            "alt_text": "Brand Logo"
-          }
-        }
-      },
-      "block_order": [
-        "logo_Y9PWwJ",
-        "logo_VTXrMM",
-        "logo_rnTNXp",
-        "logo_PMyVpj",
-        "logo_VXUXYi",
-        "logo_HCdRGF"
-      ],
-      "name": "AK Logo Carousel",
-      "settings": {
-        "heading": "Trusted By",
-        "bg_color": "#F3EFE9",
-        "heading_color": "#5E7783",
-        "logo_width": 120,
-        "logo_gap": 50,
-        "static_style": "grayscale",
-        "static_opacity": 60,
-        "hover_style": "color",
-        "show_separators": true,
-        "separator_color": "#C1C1C1",
-        "scroll_speed": 25,
-        "pause_on_hover": true,
-        "show_arrows": false,
-        "arrow_color": "#000000",
-        "arrow_bg_color": "transparent",
-        "arrow_border_color": "#dddddd",
-        "show_dots": false,
-        "dot_color": "#cccccc",
-        "active_dot_color": "#000000",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
@@ -591,7 +512,6 @@
     "featured_collection",
     "logo_slider_ak_iAPpKC",
     "counter_section_ak_wbgcep",
-    "collection_list_CYmgFw",
-    "logo_slider_ak_xAjVb9"
+    "collection_list_CYmgFw"
   ]
 }
