@@ -153,6 +153,7 @@
         "column_ixCCGP": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/vision.webp",
             "title": "OUR VISION",
             "text": "<p>To be South India’s leading name in innovative and premium packaging.</p>",
             "link_label": "",
@@ -162,6 +163,7 @@
         "column_QqiP4d": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/archery.webp",
             "title": "OUR MISSION",
             "text": "<p>Deliver creative, reliable, and sustainable packaging that adds value to every brand we serve.</p>",
             "link_label": "",
@@ -171,6 +173,7 @@
         "column_6L6wc6": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/expertise.webp",
             "title": "EXPERTISE",
             "text": "<p>20+ years in rigid box manufacturing, Custom solutions for gifts, retail, medical & corporate, High-end finishes & eco-friendly options</p>",
             "link_label": "",
