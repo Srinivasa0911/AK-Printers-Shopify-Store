@@ -136,12 +136,77 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "multicolumn_QTagt6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HkUGna": {
+          "type": "column",
+          "settings": {
+            "title": "OUR USP",
+            "text": "<p>Premium design, unmatched quality, and on-time delivery-packaging that makes a statement.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ixCCGP": {
+          "type": "column",
+          "settings": {
+            "title": "OUR VISION",
+            "text": "<p>To be South India’s leading name in innovative and premium packaging.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QqiP4d": {
+          "type": "column",
+          "settings": {
+            "title": "OUR MISSION",
+            "text": "<p>Deliver creative, reliable, and sustainable packaging that adds value to every brand we serve.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6L6wc6": {
+          "type": "column",
+          "settings": {
+            "title": "EXPERTISE",
+            "text": "<p>20+ years in rigid box manufacturing, Custom solutions for gifts, retail, medical & corporate, High-end finishes & eco-friendly options</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HkUGna",
+        "column_ixCCGP",
+        "column_QqiP4d",
+        "column_6L6wc6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose Us?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "main",
     "image_banner_EqKjWJ",
     "image_with_text_becCCQ",
-    "multirow_JKyfNj"
+    "multirow_JKyfNj",
+    "multicolumn_QTagt6"
   ]
 }
