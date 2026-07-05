@@ -101,8 +101,6 @@
         "heading_size_desktop": 36,
         "heading_size_mobile": 28,
         "text_alignment": "center",
-        "overlay_color": "#000000",
-        "overlay_opacity": 100,
         "title_color": "#000000",
         "title_size_desktop": 24,
         "title_size_mobile": 18,
