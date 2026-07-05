@@ -46,9 +46,9 @@
       ],
       "name": "AK Image Banner",
       "settings": {
-        "image": "shopify://shop_images/office_location.avif",
+        "image": "shopify://shop_images/about_us_banner.avif",
         "image_overlay_opacity": 60,
-        "image_height": "adapt",
+        "image_height": "small",
         "image_behavior": "fixed",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
