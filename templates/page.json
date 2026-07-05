@@ -47,7 +47,7 @@
       "name": "AK Image Banner",
       "settings": {
         "image": "shopify://shop_images/about_us_banner.avif",
-        "image_overlay_opacity": 60,
+        "image_overlay_opacity": 70,
         "image_height": "small",
         "image_behavior": "fixed",
         "desktop_content_position": "middle-center",
