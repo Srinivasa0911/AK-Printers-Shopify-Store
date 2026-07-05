@@ -18,16 +18,16 @@
   }
 
   .ak-contact-header h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: {{ section.settings.heading_color }};
+    color: {{ section.settings.heading_color }} !important;
+    font-size: {{ section.settings.heading_size_mobile }}px !important;
     margin-top: 0;
     margin-bottom: 1rem;
     font-weight: 600;
   }
 
   .ak-contact-header p.ak-contact-desc {
-    font-size: 1.1rem;
-    color: #555555;
+    color: {{ section.settings.description_color }} !important;
+    font-size: {{ section.settings.description_size_mobile }}px !important;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -41,7 +41,7 @@
   }
 
   .ak-contact-item {
-    background-color: #ffffff;
+    background-color: {{ section.settings.card_bg_color }};
     padding: 3rem 2rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.04);
@@ -65,29 +65,44 @@
 
   .ak-contact-item h4 {
     margin: 0 0 1rem 0;
-    font-size: 1.25rem;
-    color: #121212;
+    color: {{ section.settings.card_title_color }} !important;
+    font-size: {{ section.settings.card_title_size_mobile }}px !important;
     font-weight: 600;
   }
 
   .ak-contact-item p, 
   .ak-contact-item a {
     margin: 0;
-    font-size: 1.05rem;
-    color: #555555;
+    color: {{ section.settings.card_text_color }} !important;
+    font-size: {{ section.settings.card_text_size_mobile }}px !important;
     text-decoration: none;
     line-height: 1.6;
   }
 
   .ak-contact-item a:hover {
-    color: {{ section.settings.icon_color }};
+    color: {{ section.settings.icon_color }} !important;
   }
 
-  /* Desktop Layout: 3 Columns */
+  /* Desktop Layout & Font Adjustments */
   @media screen and (min-width: 750px) {
     .ak-contact-grid {
       grid-template-columns: repeat(3, 1fr);
       gap: 3rem;
+    }
+    
+    .ak-contact-header h2 {
+      font-size: {{ section.settings.heading_size_desktop }}px !important;
+    }
+    .ak-contact-header p.ak-contact-desc {
+      font-size: {{ section.settings.description_size_desktop }}px !important;
+    }
+    
+    .ak-contact-item h4 {
+      font-size: {{ section.settings.card_title_size_desktop }}px !important;
+    }
+    .ak-contact-item p, 
+    .ak-contact-item a {
+      font-size: {{ section.settings.card_text_size_desktop }}px !important;
     }
   }
 {%- endstyle -%}
@@ -95,7 +110,6 @@
 <div class="section-{{ section.id }} ak-contact-section">
   <div class="ak-contact-container">
     
-    <!-- Top Heading & Description -->
     <div class="ak-contact-header">
       <h2>{{ section.settings.heading }}</h2>
       {%- if section.settings.description != blank -%}
@@ -103,12 +117,10 @@
       {%- endif -%}
     </div>
 
-    <!-- 3-Column Info Row -->
     <div class="ak-contact-grid">
       {%- for block in section.blocks -%}
         <div class="ak-contact-item" {{ block.shopify_attributes }}>
           
-          <!-- SVG Icons -->
           <svg class="ak-contact-icon" viewBox="0 0 24 24">
             {%- if block.type == 'address' -%}
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-1.12 2.5-2.5-1.12 2.5-2.5 2.5z"/>
@@ -119,7 +131,6 @@
             {%- endif -%}
           </svg>
 
-          <!-- Text Details -->
           <h4>{{ block.settings.title }}</h4>
           {%- if block.type == 'email' -%}
             <a href="mailto:{{ block.settings.text }}">{{ block.settings.text }}</a>
@@ -143,6 +154,10 @@
   "class": "section",
   "settings": [
     {
+      "type": "header",
+      "content": "Section Background"
+    },
+    {
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
@@ -150,7 +165,7 @@
     },
     {
       "type": "header",
-      "content": "Section Header"
+      "content": "Top Header Styling"
     },
     {
       "type": "text",
@@ -165,6 +180,26 @@
       "default": "#121212"
     },
     {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading Size (Desktop)",
+      "min": 20,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading Size (Mobile)",
+      "min": 18,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
       "type": "textarea",
       "id": "description",
       "label": "Description",
@@ -172,9 +207,97 @@
     },
     {
       "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#555555"
+    },
+    {
+      "type": "range",
+      "id": "description_size_desktop",
+      "label": "Description Size (Desktop)",
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "label": "Description Size (Mobile)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Contact Cards Styling"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
       "id": "icon_color",
-      "label": "Card Icon & Hover Color",
+      "label": "Icon & Link Hover Color",
       "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "card_title_size_desktop",
+      "label": "Card Title Size (Desktop)",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_title_size_mobile",
+      "label": "Card Title Size (Mobile)",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "range",
+      "id": "card_text_size_desktop",
+      "label": "Card Text Size (Desktop)",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_text_size_mobile",
+      "label": "Card Text Size (Mobile)",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
     },
     {
       "type": "header",
