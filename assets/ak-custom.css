@@ -301,7 +301,6 @@ padding-bottom:80px!important;
 /** Whatsapp Button Animate */
 
 .wsp-whatsapp{
-animation:pulse 1.5s infinite;
 box-shadow:0 0 0 0 #42db87;
 -webkit-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 -moz-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -309,7 +308,7 @@ box-shadow:0 0 0 0 #42db87;
 animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 }
 
-@keyframes pulse {
+@keyframes pulsing{
 0% { transform: scale(1); }
 50% { transform: scale(1.04); }
 100% { transform: scale(1); }
