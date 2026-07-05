@@ -79,7 +79,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 80,
         "padding_bottom": 80
@@ -180,9 +180,81 @@
         "columns_desktop": 4,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "ak_advanced_gallery_kw6zqP": {
+      "type": "ak-advanced-gallery",
+      "blocks": {
+        "image_JVktwa": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_DJRBcw": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_m7ArQX": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_7mgrCr": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_y7DFaW": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "image_bnjjRj": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_JVktwa",
+        "image_DJRBcw",
+        "image_m7ArQX",
+        "image_7mgrCr",
+        "image_y7DFaW",
+        "image_bnjjRj"
+      ],
+      "name": "AK Advanced Gallery",
+      "settings": {
+        "bg_color": "#ffffff",
+        "title": "Our Creative Space",
+        "heading_color": "#121212",
+        "heading_size_desktop": 36,
+        "heading_size_mobile": 28,
+        "description": "Custom Rigid Boxes that Elevate Your Brand.",
+        "text_color": "#555555",
+        "text_size_desktop": 16,
+        "text_size_mobile": 14,
+        "text_alignment": "center",
+        "gallery_layout": "grid",
+        "image_ratio": "1 / 1",
+        "border_radius": 8,
+        "max_width": 1200,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "gap_desktop": 20,
+        "gap_mobile": 16,
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -193,6 +265,7 @@
     "image_banner_EqKjWJ",
     "rich_text_H6GBpn",
     "multirow_JKyfNj",
-    "multicolumn_QTagt6"
+    "multicolumn_QTagt6",
+    "ak_advanced_gallery_kw6zqP"
   ]
 }
