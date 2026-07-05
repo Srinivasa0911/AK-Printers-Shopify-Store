@@ -43,6 +43,7 @@
     display: block;
     text-decoration: none;
     transition: transform 0.3s ease;
+    height: 100%;
   }
 
   .ak-contact-card-wrapper:hover {
@@ -66,6 +67,7 @@
     height: 40px;
     fill: {{ section.settings.icon_color }};
     margin-bottom: 1.5rem;
+    transition: fill 0.3s ease;
   }
 
   .ak-contact-item h4 {
@@ -73,15 +75,37 @@
     color: {{ section.settings.card_title_color }} !important;
     font-size: {{ section.settings.card_title_size_mobile }}px !important;
     font-weight: 600;
+    transition: color 0.3s ease;
   }
 
   .ak-contact-item p, 
-  .ak-contact-item a {
+  .ak-contact-item span {
     margin: 0;
     color: {{ section.settings.card_text_color }} !important;
     font-size: {{ section.settings.card_text_size_mobile }}px !important;
-    text-decoration: none;
     line-height: 1.6;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  /* Inline Anchor Link Styles inside the card */
+  .ak-contact-item a {
+    color: {{ section.settings.card_link_color }} !important;
+    font-size: {{ section.settings.card_text_size_mobile }}px !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover States for the entire linked card */
+  a.ak-contact-card-wrapper:hover .ak-contact-item h4,
+  a.ak-contact-card-wrapper:hover .ak-contact-item span,
+  a.ak-contact-card-wrapper:hover .ak-contact-item p,
+  .ak-contact-item a:hover {
+    color: {{ section.settings.card_link_hover_color }} !important;
+  }
+
+  a.ak-contact-card-wrapper:hover .ak-contact-icon {
+    fill: {{ section.settings.card_link_hover_color }};
   }
 
   /* Desktop Layout & Font Adjustments */
@@ -102,13 +126,15 @@
       font-size: {{ section.settings.card_title_size_desktop }}px !important;
     }
     .ak-contact-item p, 
-    .ak-contact-item a {
+    .ak-contact-item a,
+    .ak-contact-item span {
       font-size: {{ section.settings.card_text_size_desktop }}px !important;
     }
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }} ak-contact-section">
+<!-- Added Section Anchor ID -->
+<div class="section-{{ section.id }} ak-contact-section" {% if section.settings.section_anchor != blank %}id="{{ section.settings.section_anchor | handleize }}"{% endif %}>
   <div class="ak-contact-container">
     
     <div class="ak-contact-header">
@@ -121,10 +147,11 @@
     <div class="ak-contact-grid">
       {%- for block in section.blocks -%}
         
+        <!-- Added Block Anchor ID and Updated Link Type -->
         {%- if block.settings.url != blank -%}
-          <a href="{{ block.settings.url }}" class="ak-contact-card-wrapper" {{ block.shopify_attributes }}>
+          <a href="{{ block.settings.url }}" class="ak-contact-card-wrapper" {% if block.settings.anchor_id != blank %}id="{{ block.settings.anchor_id | handleize }}"{% endif %} {{ block.shopify_attributes }}>
         {%- else -%}
-          <div class="ak-contact-card-wrapper" {{ block.shopify_attributes }}>
+          <div class="ak-contact-card-wrapper" {% if block.settings.anchor_id != blank %}id="{{ block.settings.anchor_id | handleize }}"{% endif %} {{ block.shopify_attributes }}>
         {%- endif -%}
 
         <div class="ak-contact-item">
@@ -166,6 +193,16 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Section Anchors & IDs"
+    },
+    {
+      "type": "text",
+      "id": "section_anchor",
+      "label": "Section Anchor ID",
+      "info": "Enter a unique word (like 'contact-row') to link directly to this section from your menu."
+    },
     {
       "type": "header",
       "content": "Section Background"
@@ -257,7 +294,7 @@
     {
       "type": "color",
       "id": "icon_color",
-      "label": "Icon Color",
+      "label": "Icon Default Color",
       "default": "#121212"
     },
     {
@@ -289,7 +326,7 @@
     {
       "type": "color",
       "id": "card_text_color",
-      "label": "Card Text Color",
+      "label": "Card Text Default Color",
       "default": "#555555"
     },
     {
@@ -311,6 +348,24 @@
       "step": 1,
       "unit": "px",
       "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Card Anchor Links & Hover"
+    },
+    {
+      "type": "color",
+      "id": "card_link_color",
+      "label": "Inline Anchor Link Color",
+      "default": "#121212",
+      "info": "Color for any manual links you type inside the cards."
+    },
+    {
+      "type": "color",
+      "id": "card_link_hover_color",
+      "label": "Card Hover Color",
+      "default": "#555555",
+      "info": "When a card has a link attached, hovering over it changes the text and icon to this color."
     },
     {
       "type": "header",
@@ -356,9 +411,16 @@
           "default": "123 Packaging Lane\nRamapuram, Chennai"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "url",
-          "label": "Card Link (Optional)"
+          "label": "Card Link URL or Anchor",
+          "info": "Enter a link (https://...) or an anchor (e.g., #map) to make the card clickable."
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Card Anchor ID",
+          "info": "Give this card a unique ID (e.g., 'address-card') to link TO it."
         }
       ]
     },
@@ -380,9 +442,16 @@
           "default": "+91 98765 43210"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "url",
-          "label": "Card Link (Optional)"
+          "label": "Card Link URL or Anchor",
+          "info": "Enter a link (tel:+91...) or an anchor (e.g., #contact)."
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Card Anchor ID",
+          "info": "Give this card a unique ID to link TO it."
         }
       ]
     },
@@ -404,9 +473,16 @@
           "default": "hello@akprinters.net"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "url",
-          "label": "Card Link (Optional)"
+          "label": "Card Link URL or Anchor",
+          "info": "Enter a link (mailto:...) or an anchor."
+        },
+        {
+          "type": "text",
+          "id": "anchor_id",
+          "label": "Card Anchor ID",
+          "info": "Give this card a unique ID to link TO it."
         }
       ]
     }
