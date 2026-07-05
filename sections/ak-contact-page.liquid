@@ -11,7 +11,6 @@
     padding: 0 2rem;
   }
 
-  /* Centered Header Section */
   .ak-contact-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -33,11 +32,21 @@
     margin: 0 auto;
   }
 
-  /* Three Column Grid Setup */
   .ak-contact-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr; 
     gap: 2rem;
+  }
+
+  /* Contact Card Styling */
+  .ak-contact-card-wrapper {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .ak-contact-card-wrapper:hover {
+    transform: translateY(-5px);
   }
 
   .ak-contact-item {
@@ -49,11 +58,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-  }
-
-  .ak-contact-item:hover {
-    transform: translateY(-5px);
+    height: 100%;
   }
 
   .ak-contact-icon {
@@ -77,10 +82,6 @@
     font-size: {{ section.settings.card_text_size_mobile }}px !important;
     text-decoration: none;
     line-height: 1.6;
-  }
-
-  .ak-contact-item a:hover {
-    color: {{ section.settings.icon_color }} !important;
   }
 
   /* Desktop Layout & Font Adjustments */
@@ -119,8 +120,14 @@
 
     <div class="ak-contact-grid">
       {%- for block in section.blocks -%}
-        <div class="ak-contact-item" {{ block.shopify_attributes }}>
-          
+        
+        {%- if block.settings.url != blank -%}
+          <a href="{{ block.settings.url }}" class="ak-contact-card-wrapper" {{ block.shopify_attributes }}>
+        {%- else -%}
+          <div class="ak-contact-card-wrapper" {{ block.shopify_attributes }}>
+        {%- endif -%}
+
+        <div class="ak-contact-item">
           <svg class="ak-contact-icon" viewBox="0 0 24 24">
             {%- if block.type == 'address' -%}
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-1.12 2.5-2.5-1.12 2.5-2.5 2.5z"/>
@@ -133,14 +140,20 @@
 
           <h4>{{ block.settings.title }}</h4>
           {%- if block.type == 'email' -%}
-            <a href="mailto:{{ block.settings.text }}">{{ block.settings.text }}</a>
+            <span>{{ block.settings.text }}</span>
           {%- elsif block.type == 'phone' -%}
-            <a href="tel:{{ block.settings.text | remove: ' ' | remove: '-' }}">{{ block.settings.text }}</a>
+            <span>{{ block.settings.text }}</span>
           {%- else -%}
             <p>{{ block.settings.text | newline_to_br }}</p>
           {%- endif -%}
-
         </div>
+
+        {%- if block.settings.url != blank -%}
+          </a>
+        {%- else -%}
+          </div>
+        {%- endif -%}
+
       {%- endfor -%}
     </div>
 
@@ -244,7 +257,7 @@
     {
       "type": "color",
       "id": "icon_color",
-      "label": "Icon & Link Hover Color",
+      "label": "Icon Color",
       "default": "#121212"
     },
     {
@@ -341,6 +354,11 @@
           "id": "text",
           "label": "Address Details",
           "default": "123 Packaging Lane\nRamapuram, Chennai"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Card Link (Optional)"
         }
       ]
     },
@@ -360,6 +378,11 @@
           "id": "text",
           "label": "Phone Number",
           "default": "+91 98765 43210"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Card Link (Optional)"
         }
       ]
     },
@@ -379,6 +402,11 @@
           "id": "text",
           "label": "Email",
           "default": "hello@akprinters.net"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Card Link (Optional)"
         }
       ]
     }
