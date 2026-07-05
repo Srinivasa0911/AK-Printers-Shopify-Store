@@ -60,6 +60,7 @@
         "portfolio_item_wxtTeL": {
           "type": "portfolio_item",
           "settings": {
+            "image": "shopify://shop_images/forest-hiker.jpg",
             "title": "Premium Rigid Boxes",
             "link": ""
           }
@@ -100,10 +101,9 @@
         "heading_size_desktop": 36,
         "heading_size_mobile": 28,
         "text_alignment": "center",
-        "overlay_color": "#DF1818",
-        "overlay_opacity": 40,
-        "overlay_opacity_hover": 60,
-        "title_color": "#551111",
+        "overlay_color": "#000000",
+        "overlay_opacity": 100,
+        "title_color": "#000000",
         "title_size_desktop": 24,
         "title_size_mobile": 18,
         "max_width": 1400,
