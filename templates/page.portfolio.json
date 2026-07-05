@@ -17,17 +17,17 @@
         "padding_bottom": 28
       }
     },
-    "image_banner_XRxMaU": {
+    "image_banner_tpGK8q": {
       "type": "image-banner",
       "blocks": {
-        "heading_Kdmhgg": {
+        "heading_cAJFb7": {
           "type": "heading",
           "settings": {
-            "heading": "Our Portfolio",
+            "heading": "Portfolio",
             "heading_size": "h1"
           }
         },
-        "text_Xtznee": {
+        "text_GjVtyk": {
           "type": "text",
           "settings": {
             "text": "Explore premiumrigid box solutions for your brand packaging",
@@ -36,8 +36,8 @@
         }
       },
       "block_order": [
-        "heading_Kdmhgg",
-        "text_Xtznee"
+        "heading_cAJFb7",
+        "text_GjVtyk"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -57,6 +57,6 @@
   },
   "order": [
     "main",
-    "image_banner_XRxMaU"
+    "image_banner_tpGK8q"
   ]
 }
