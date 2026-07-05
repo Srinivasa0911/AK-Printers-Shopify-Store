@@ -62,7 +62,8 @@
           "settings": {
             "title": "Location",
             "text": "No.639/F, Thiruvottiyur High Road, Ajax,\nChennai - 600 019. INDIA",
-            "url": ""
+            "url": "",
+            "anchor_id": ""
           }
         },
         "phone_gKLq9m": {
@@ -70,7 +71,8 @@
           "settings": {
             "title": "Call Us",
             "text": "+91 98765 43210",
-            "url": ""
+            "url": "",
+            "anchor_id": ""
           }
         },
         "email_d99nUb": {
@@ -78,7 +80,8 @@
           "settings": {
             "title": "Email Us",
             "text": "hello@akprinters.net",
-            "url": "#"
+            "url": "mailto:hello@akprinters.net",
+            "anchor_id": ""
           }
         }
       },
@@ -89,6 +92,7 @@
       ],
       "name": "AK Contact Row",
       "settings": {
+        "section_anchor": "",
         "bg_color": "#f0f0f0",
         "heading": "Get in Touch",
         "heading_color": "#121212",
@@ -106,6 +110,8 @@
         "card_text_color": "#333333",
         "card_text_size_desktop": 14,
         "card_text_size_mobile": 14,
+        "card_link_color": "#121212",
+        "card_link_hover_color": "#555555",
         "padding_top": 80,
         "padding_bottom": 80
       }
