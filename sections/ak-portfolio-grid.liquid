@@ -77,6 +77,64 @@
     pointer-events: none;
   }
 
+  /* Lightbox Specific Styles */
+  .ak-lightbox-trigger {
+    cursor: zoom-in;
+  }
+  
+  .ak-lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    padding-top: 5vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .ak-lightbox-modal.is-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+  .ak-lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+  }
+
+  .ak-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: 300;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 9999999;
+    line-height: 1;
+  }
+
+  .ak-lightbox-close:hover,
+  .ak-lightbox-close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
   /* Desktop Adjustments */
   @media screen and (min-width: 750px) {
     .section-{{ section.id }} h2.ak-portfolio-heading {
@@ -105,7 +163,13 @@
   <!-- Portfolio Grid -->
   <div class="ak-portfolio-container">
     {%- for block in section.blocks -%}
-      <a href="{{ block.settings.link | default: '#' }}" class="ak-portfolio-item" {{ block.shopify_attributes }}>
+      
+      {%- assign high_res_image = block.settings.image | image_url: width: 2000 -%}
+      
+      <a href="{% if section.settings.enable_lightbox %}{{ high_res_image }}{% else %}{{ block.settings.link | default: '#' }}{% endif %}" 
+         class="ak-portfolio-item {% if section.settings.enable_lightbox %}ak-lightbox-trigger{% endif %}" 
+         data-highres="{{ high_res_image }}"
+         {{ block.shopify_attributes }}>
         
         <!-- Image -->
         {%- if block.settings.image != blank -%}
@@ -126,7 +190,68 @@
     {%- endfor -%}
   </div>
 
+  <!-- Lightbox Modal HTML -->
+  {%- if section.settings.enable_lightbox -%}
+    <div id="ak-lightbox-modal-{{ section.id }}" class="ak-lightbox-modal">
+      <span class="ak-lightbox-close">&times;</span>
+      <img class="ak-lightbox-content" id="ak-lightbox-img-{{ section.id }}">
+    </div>
+  {%- endif -%}
+
 </div>
+
+<!-- Lightbox JavaScript -->
+{%- if section.settings.enable_lightbox -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionId = '{{ section.id }}';
+    const section = document.querySelector(`.section-${sectionId}`);
+    
+    if (section) {
+      const modal = section.querySelector(`#ak-lightbox-modal-${sectionId}`);
+      const modalImg = section.querySelector(`#ak-lightbox-img-${sectionId}`);
+      const closeBtn = section.querySelector('.ak-lightbox-close');
+      const triggers = section.querySelectorAll('.ak-lightbox-trigger');
+      
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault(); 
+          const imgSrc = this.getAttribute('data-highres');
+          modal.style.display = 'flex';
+          
+          setTimeout(() => { 
+            modal.classList.add('is-open'); 
+          }, 10);
+          
+          modalImg.src = imgSrc;
+        });
+      });
+      
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        setTimeout(() => { 
+          modal.style.display = 'none'; 
+          modalImg.src = ''; 
+        }, 300);
+      };
+      
+      closeBtn.addEventListener('click', closeModal);
+      
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape" && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+    }
+  });
+</script>
+{%- endif -%}
 
 {% schema %}
 {
@@ -190,6 +315,13 @@
     {
       "type": "header",
       "content": "Image Overlay & Title Styling"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_lightbox",
+      "label": "Enable Image Lightbox",
+      "info": "When enabled, clicking an image will open it in full screen.",
+      "default": true
     },
     {
       "type": "color_background",
@@ -343,7 +475,7 @@
         {
           "type": "url",
           "id": "link",
-          "label": "Link destination"
+          "label": "Link destination (If Lightbox is OFF)"
         }
       ]
     }
