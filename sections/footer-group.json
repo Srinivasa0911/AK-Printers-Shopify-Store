@@ -49,7 +49,7 @@
           "settings": {
             "heading": "Our Location",
             "show_icon": true,
-            "address": "<p>123 Commerce Blvd<br/>Suite 100<br/>New York, NY 10001</p>"
+            "address": "<p>No.639/F, Thiruvottiyur High Road, Ajax,<br/>Chennai - 600 019. INDIA</p>"
           }
         }
       },
@@ -60,16 +60,16 @@
         "location_BriXqP"
       ],
       "settings": {
-        "bg_color": "#111827",
+        "bg_color": "#000000",
         "heading_color": "#ffffff",
-        "text_color": "#aeb6c5",
-        "link_color": "#d1d5db",
-        "icon_color": "#60a5fa",
-        "border_color": "#245395",
-        "heading_size": 16,
+        "text_color": "#FFFFFF",
+        "link_color": "#FFFFFF",
+        "icon_color": "#FFFFFF",
+        "border_color": "#F0F0F0",
+        "heading_size": 18,
         "text_size": 14,
         "link_size": 14,
-        "icon_size": 20,
+        "icon_size": 16,
         "show_payment_icons": false,
         "payment_image_width": 50,
         "payment_image": "shopify://shop_images/Kia_Motor.avif",
@@ -78,8 +78,8 @@
         "terms_text": "Terms & Conditions",
         "terms_link": "#",
         "container_width": 1400,
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 64,
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }

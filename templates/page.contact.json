@@ -30,7 +30,7 @@
         "text_FKLyEk": {
           "type": "text",
           "settings": {
-            "text": "Your Perfect PackageStarts Here.",
+            "text": "Your Perfect Package Starts Here.",
             "text_style": "subtitle"
           }
         }
@@ -60,8 +60,8 @@
         "address_UNR4a3": {
           "type": "address",
           "settings": {
-            "title": "Office Address",
-            "text": "123 Packaging Lane\nRamapuram, Chennai"
+            "title": "Location",
+            "text": "No.639/F, Thiruvottiyur High Road, Ajax,\nChennai - 600 019. INDIA"
           }
         },
         "phone_gKLq9m": {
@@ -86,7 +86,7 @@
       ],
       "name": "AK Contact Row",
       "settings": {
-        "bg_color": "#fafafa",
+        "bg_color": "#F0F0F0",
         "heading": "Get in Touch",
         "heading_color": "#121212",
         "heading_size_desktop": 40,
@@ -96,15 +96,15 @@
         "description_size_desktop": 18,
         "description_size_mobile": 16,
         "card_bg_color": "#ffffff",
-        "icon_color": "#121212",
-        "card_title_color": "#121212",
+        "icon_color": "#000000",
+        "card_title_color": "#000000",
         "card_title_size_desktop": 18,
         "card_title_size_mobile": 18,
-        "card_text_color": "#555555",
-        "card_text_size_desktop": 15,
-        "card_text_size_mobile": 15,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "card_text_color": "#333333",
+        "card_text_size_desktop": 14,
+        "card_text_size_mobile": 14,
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "form": {
@@ -112,9 +112,9 @@
       "settings": {
         "heading": "Contact Us",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-2",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
