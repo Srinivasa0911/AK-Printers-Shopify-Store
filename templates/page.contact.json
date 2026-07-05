@@ -54,24 +54,24 @@
         "show_text_below": false
       }
     },
-    "ak_contact_page_4wVW3k": {
+    "ak_contact_page_wxGnxd": {
       "type": "ak-contact-page",
       "blocks": {
-        "address_fT8kX3": {
+        "address_UNR4a3": {
           "type": "address",
           "settings": {
             "title": "Office Address",
-            "text": "123 Packaging Lane\nRamapuram, Chennai 600089"
+            "text": "123 Packaging Lane\nRamapuram, Chennai"
           }
         },
-        "phone_E8JPxT": {
+        "phone_gKLq9m": {
           "type": "phone",
           "settings": {
             "title": "Call Us",
             "text": "+91 98765 43210"
           }
         },
-        "email_BADmDV": {
+        "email_d99nUb": {
           "type": "email",
           "settings": {
             "title": "Email Us",
@@ -80,17 +80,17 @@
         }
       },
       "block_order": [
-        "address_fT8kX3",
-        "phone_E8JPxT",
-        "email_BADmDV"
+        "address_UNR4a3",
+        "phone_gKLq9m",
+        "email_d99nUb"
       ],
-      "name": "AK Contact Section",
+      "name": "AK Contact Row",
       "settings": {
         "bg_color": "#fafafa",
         "heading": "Get in Touch",
         "heading_color": "#121212",
-        "description": "Have a project in mind or need a quote for custom packaging? Fill out the form and our team will get back to you within 24 hours.",
-        "icon_color": "#000000",
+        "description": "We would love to hear from you. Reach out to us using any of the methods below.",
+        "icon_color": "#121212",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -98,7 +98,7 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Get In Touch",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
         "padding_top": 36,
@@ -109,7 +109,7 @@
   "order": [
     "main",
     "image_banner_WQMKid",
-    "ak_contact_page_4wVW3k",
+    "ak_contact_page_wxGnxd",
     "form"
   ]
 }
