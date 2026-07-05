@@ -299,9 +299,8 @@ padding-bottom:80px!important;
 }
 
 /** Whatsapp Button Animate */
-
 .wsp-whatsapp{
-box-shadow:0 0 0 0 #42db87;
+box-shadow:0 0 0 0 #000;
 -webkit-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 -moz-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 -ms-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
