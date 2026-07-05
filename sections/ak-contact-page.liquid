@@ -52,14 +52,16 @@
 
   .ak-contact-item {
     background-color: {{ section.settings.card_bg_color }};
+    border: {{ section.settings.card_border_thickness }}px solid {{ section.settings.card_border_color }};
     padding: 3rem 2rem;
-    border-radius: 12px;
+    border-radius: {{ section.settings.card_border_radius }}px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+    transition: border-color 0.3s ease;
   }
 
   .ak-contact-icon {
@@ -106,6 +108,10 @@
 
   a.ak-contact-card-wrapper:hover .ak-contact-icon {
     fill: {{ section.settings.card_link_hover_color }};
+  }
+  
+  a.ak-contact-card-wrapper:hover .ak-contact-item {
+    border-color: {{ section.settings.card_link_hover_color }};
   }
 
   /* Desktop Layout & Font Adjustments */
@@ -293,6 +299,33 @@
     },
     {
       "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e2e2e2"
+    },
+    {
+      "type": "range",
+      "id": "card_border_thickness",
+      "label": "Card Border Thickness",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1,
+      "info": "Set to 0 to remove the border."
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card Corner Radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
       "id": "icon_color",
       "label": "Icon Default Color",
       "default": "#121212"
@@ -365,7 +398,7 @@
       "id": "card_link_hover_color",
       "label": "Card Hover Color",
       "default": "#555555",
-      "info": "When a card has a link attached, hovering over it changes the text and icon to this color."
+      "info": "When a card has a link attached, hovering over it changes the text, icon, and border to this color."
     },
     {
       "type": "header",
@@ -408,7 +441,7 @@
           "type": "textarea",
           "id": "text",
           "label": "Address Details",
-          "default": "123 Packaging Lane\nRamapuram, Chennai"
+          "default": "123 Packaging Lane\nராமாபுரம், Chennai"
         },
         {
           "type": "text",
