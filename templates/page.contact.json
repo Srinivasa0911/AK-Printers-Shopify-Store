@@ -86,7 +86,7 @@
       ],
       "name": "AK Contact Row",
       "settings": {
-        "bg_color": "#FFFFFF",
+        "bg_color": "#F0F0F0",
         "heading": "Get in Touch",
         "heading_color": "#121212",
         "heading_size_desktop": 40,
