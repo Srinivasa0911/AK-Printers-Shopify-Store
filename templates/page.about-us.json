@@ -53,10 +53,164 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "image_with_text_becCCQ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UP6D6z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Packaging that defines your Brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_na7eDi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At AK Printers, we specialize in high-quality, custom rigid box packaging that enhances brand value and leaves a lasting impression. With a perfect blend of design innovation, durability, and timely delivery, we ensure every box tells your brand's story.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_UP6D6z",
+        "text_na7eDi"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-2",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "multirow_JKyfNj": {
+      "type": "multirow",
+      "blocks": {
+        "row_hmfKPW": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "",
+            "text": "<p>At AK Printers, we specialize in crafting premium rigid box packaging solutions designed to elevate your brand and product presentation. As one of South India’s trusted packaging partners, we offer tailor-made boxes that combine functionality, durability, and luxury-perfect for everything from gifts to corporate kits.</p><p>Our extensive product lineup includes Cake Boxes, Cosmetic Boxes, Wedding Hampers, Mobile Boxes, Dry Fruit Packs, Medical Packaging, and more-each made with precision and creative craftsmanship.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_EAeQyC": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "",
+            "text": "<p>Backed by 20+ years of industry experience, our dedicated team works closely with you to deliver custom designs, quick turnarounds, and uncompromised quality. Whether you need innovative packaging for retail, events, or product launches, we bring your vision to life-on time and within budget.</p><p>Trust AK Printers to create packaging that not only protects but impresses. Let us help you take your brand to the next level with rigid boxes that speak volumes.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_hmfKPW",
+        "row_EAeQyC"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "multicolumn_QTagt6": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HkUGna": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/usp.webp",
+            "title": "OUR USP",
+            "text": "<p>Premium design, unmatched quality, and on-time delivery-packaging that makes a statement.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ixCCGP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/vision.webp",
+            "title": "OUR VISION",
+            "text": "<p>To be South India’s leading name in innovative and premium packaging.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_QqiP4d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/archery.webp",
+            "title": "OUR MISSION",
+            "text": "<p>Deliver creative, reliable, and sustainable packaging that adds value to every brand we serve.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6L6wc6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/expertise.webp",
+            "title": "EXPERTISE",
+            "text": "<p>20+ years in rigid box manufacturing, Custom solutions for gifts, retail, medical & corporate, High-end finishes & eco-friendly options</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HkUGna",
+        "column_ixCCGP",
+        "column_QqiP4d",
+        "column_6L6wc6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose Us?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "main",
-    "image_banner_EqKjWJ"
+    "image_banner_EqKjWJ",
+    "image_with_text_becCCQ",
+    "multirow_JKyfNj",
+    "multicolumn_QTagt6"
   ]
 }
