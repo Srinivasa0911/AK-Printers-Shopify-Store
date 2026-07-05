@@ -290,8 +290,8 @@ color:rgba(var(--color-foreground),1)!important
 }
 
 ul#Slider-template--22555924988163__multicolumn_QTagt6 .multicolumn-list__item.center .media--adapt, .multicolumn-list__item .media--adapt .multicolumn-card__image{
-width: 80px;
-height: auto;
+width:80px!important;
+height:auto!important;
 }
 
 ul#Slider-template--22555924988163__multicolumn_QTagt6 .media.media--transparent.media--adapt{
