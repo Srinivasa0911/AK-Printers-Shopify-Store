@@ -23,47 +23,35 @@
         "heading_TNThFa": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "About Us",
             "heading_size": "h1"
           }
         },
         "text_DFU3dF": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_C3fgCD": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "AK Printers is a premium rigid box manufacturing company based in Chennai.",
+            "text_style": "subtitle"
           }
         }
       },
       "block_order": [
         "heading_TNThFa",
-        "text_DFU3dF",
-        "buttons_C3fgCD"
+        "text_DFU3dF"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/about_us_banner.avif",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 60,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": true
+        "show_text_below": false
       }
     }
   },
