@@ -281,3 +281,10 @@ display: inline-block!important;
 justify-content: center;
 align-items: center;
 }
+
+
+/** About Us Page CSS */
+
+#shopify-section-template--22051286352131__ak_image_banner_Np8z8Q h2.banner__heading.inline-richtext.h1{
+margin-bottom:-50px!important;
+}
