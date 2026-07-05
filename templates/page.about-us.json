@@ -39,7 +39,7 @@
         "heading_TNThFa",
         "text_DFU3dF"
       ],
-      "name": "t:sections.image-banner.presets.name",
+      "name": "About Us",
       "settings": {
         "image": "shopify://shop_images/about_us_banner.avif",
         "image_overlay_opacity": 60,
@@ -75,7 +75,7 @@
         "heading_MkQ8wC",
         "text_TgbP3F"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "Packaging",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -102,7 +102,7 @@
       "block_order": [
         "row_hmfKPW"
       ],
-      "name": "t:sections.multirow.presets.name",
+      "name": "Inner About Us",
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
@@ -167,7 +167,7 @@
         "image_qzW3VJ",
         "image_7CdGKF"
       ],
-      "name": "AK Advanced Gallery",
+      "name": "ISO Certified Company",
       "settings": {
         "bg_color": "#fdfdfd",
         "title": "An ISO Certified Company",
@@ -242,7 +242,7 @@
         "column_QqiP4d",
         "column_6L6wc6"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "Why Choose Us",
       "settings": {
         "title": "Why Choose Us?",
         "heading_size": "h1",
@@ -308,7 +308,7 @@
         "image_y7DFaW",
         "image_bnjjRj"
       ],
-      "name": "AK Advanced Gallery",
+      "name": "Creative Space",
       "settings": {
         "bg_color": "#fdfdfd",
         "title": "Our Creative Space",
