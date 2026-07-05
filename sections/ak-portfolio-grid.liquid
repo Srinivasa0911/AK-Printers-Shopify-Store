@@ -61,13 +61,12 @@
     z-index: 1;
   }
 
-  /* Static Title Setup */
+  /* Static Title Setup (Positioned at Bottom) */
   .ak-portfolio-title {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
     text-align: center;
     color: {{ section.settings.title_color }};
     font-size: {{ section.settings.title_size_mobile }}px;
@@ -75,7 +74,9 @@
     letter-spacing: 0.05em;
     z-index: 2;
     margin: 0;
-    pointer-events: none; /* Allows clicking through the text to the link */
+    padding: 0 1rem;
+    pointer-events: none; /* Allows clicking through the text */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* Ensures legibility without the overlay */
     transition: transform 0.4s ease;
   }
 
@@ -85,11 +86,7 @@
   }
   
   .ak-portfolio-item:hover .ak-portfolio-overlay {
-    opacity: {{ section.settings.overlay_opacity_hover }}%; /* Change overlay darkness on hover */
-  }
-
-  .ak-portfolio-item:hover .ak-portfolio-title {
-    transform: translate(-50%, -50%) scale(1.05); /* Slight bump to text on hover */
+    opacity: {{ section.settings.overlay_opacity_hover }}%; /* Overlay appears on hover */
   }
 
   /* Desktop Adjustments */
@@ -103,6 +100,7 @@
     }
     .ak-portfolio-title {
       font-size: {{ section.settings.title_size_desktop }}px;
+      bottom: 32px;
     }
   }
 {%- endstyle -%}
@@ -219,7 +217,8 @@
       "max": 100,
       "step": 5,
       "unit": "%",
-      "default": 40
+      "default": 0,
+      "info": "Set to 0% if you only want the overlay to appear on hover."
     },
     {
       "type": "range",
@@ -230,7 +229,7 @@
       "step": 5,
       "unit": "%",
       "default": 60,
-      "info": "Change this to make the overlay darker or lighter when a user hovers over the image."
+      "info": "Controls how dark the overlay gets when hovered."
     },
     {
       "type": "color",
