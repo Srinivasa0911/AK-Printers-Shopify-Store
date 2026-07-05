@@ -85,44 +85,6 @@
         "padding_bottom": 80
       }
     },
-    "image_with_text_becCCQ": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_UP6D6z": {
-          "type": "heading",
-          "settings": {
-            "heading": "Packaging that defines your Brand",
-            "heading_size": "h1"
-          }
-        },
-        "text_na7eDi": {
-          "type": "text",
-          "settings": {
-            "text": "<p>At AK Printers, we specialize in high-quality, custom rigid box packaging that enhances brand value and leaves a lasting impression. With a perfect blend of design innovation, durability, and timely delivery, we ensure every box tells your brand's story.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_UP6D6z",
-        "text_na7eDi"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-2",
-        "color_scheme": "scheme-2",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "multirow_JKyfNj": {
       "type": "multirow",
       "blocks": {
@@ -230,7 +192,6 @@
     "main",
     "image_banner_EqKjWJ",
     "rich_text_H6GBpn",
-    "image_with_text_becCCQ",
     "multirow_JKyfNj",
     "multicolumn_QTagt6"
   ]
