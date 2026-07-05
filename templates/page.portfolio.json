@@ -16,9 +16,47 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "image_banner_tpGK8q": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_cAJFb7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Portfolio",
+            "heading_size": "h1"
+          }
+        },
+        "text_GjVtyk": {
+          "type": "text",
+          "settings": {
+            "text": "Explore premiumrigid box solutions for your brand packaging",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cAJFb7",
+        "text_GjVtyk"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/explore_premium_rigid_box_solutions_for_your_brand_packaging.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "image_banner_tpGK8q"
   ]
 }
