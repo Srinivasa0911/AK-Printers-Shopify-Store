@@ -71,7 +71,7 @@
           "settings": {
             "title": "Call Us",
             "text": "+91 98765 43210",
-            "url": "",
+            "url": "tel:+91 98765 43210",
             "anchor_id": ""
           }
         },
