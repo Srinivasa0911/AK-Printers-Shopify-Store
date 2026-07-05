@@ -30,25 +30,28 @@
 
   /* Portfolio Item Wrapper */
   .ak-portfolio-item {
-    position: relative;
     display: block;
-    border-radius: {{ section.settings.border_radius }}px;
-    overflow: hidden;
-    aspect-ratio: {{ section.settings.image_ratio }};
     text-decoration: none;
   }
 
-  /* Image Setup */
-  .ak-portfolio-item img, 
-  .ak-portfolio-item svg {
+  /* Image Box Setup */
+  .ak-portfolio-image-wrapper {
+    position: relative;
+    border-radius: {{ section.settings.border_radius }}px;
+    overflow: hidden;
+    aspect-ratio: {{ section.settings.image_ratio }};
+    background-color: #f4f4f4; /* Fallback color */
+  }
+
+  .ak-portfolio-image-wrapper img, 
+  .ak-portfolio-image-wrapper svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
   }
 
-  /* Color Overlay Setup */
+  /* Static Color Overlay */
   .ak-portfolio-overlay {
     position: absolute;
     top: 0;
@@ -57,36 +60,18 @@
     height: 100%;
     background-color: {{ section.settings.overlay_color }};
     opacity: {{ section.settings.overlay_opacity }}%;
-    transition: opacity 0.4s ease;
     z-index: 1;
+    pointer-events: none;
   }
 
-  /* Static Title Setup (Positioned at Bottom) */
+  /* Static Title (Below Image) */
   .ak-portfolio-title {
-    position: absolute;
-    bottom: 24px;
-    left: 0;
-    width: 100%;
-    text-align: center;
     color: {{ section.settings.title_color }};
     font-size: {{ section.settings.title_size_mobile }}px;
     font-weight: 600;
     letter-spacing: 0.05em;
-    z-index: 2;
-    margin: 0;
-    padding: 0 1rem;
-    pointer-events: none; /* Allows clicking through the text */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4); /* Ensures legibility without the overlay */
-    transition: transform 0.4s ease;
-  }
-
-  /* Hover Effects */
-  .ak-portfolio-item:hover img {
-    transform: scale(1.08); /* Slight zoom on image */
-  }
-  
-  .ak-portfolio-item:hover .ak-portfolio-overlay {
-    opacity: {{ section.settings.overlay_opacity_hover }}%; /* Overlay appears on hover */
+    margin: 1.25rem 0 0 0;
+    text-align: center;
   }
 
   /* Desktop Adjustments */
@@ -100,7 +85,6 @@
     }
     .ak-portfolio-title {
       font-size: {{ section.settings.title_size_desktop }}px;
-      bottom: 32px;
     }
   }
 {%- endstyle -%}
@@ -119,17 +103,20 @@
     {%- for block in section.blocks -%}
       <a href="{{ block.settings.link | default: '#' }}" class="ak-portfolio-item" {{ block.shopify_attributes }}>
         
-        <!-- Image -->
-        {%- if block.settings.image != blank -%}
-          {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', alt: block.settings.title }}
-        {%- else -%}
-          {{ 'collection-1' | placeholder_svg_tag }}
-        {%- endif -%}
+        <!-- Image & Overlay Container -->
+        <div class="ak-portfolio-image-wrapper">
+          <!-- Image -->
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', alt: block.settings.title }}
+          {%- else -%}
+            {{ 'collection-1' | placeholder_svg_tag }}
+          {%- endif -%}
 
-        <!-- Color Overlay -->
-        <div class="ak-portfolio-overlay"></div>
+          <!-- Static Color Overlay -->
+          <div class="ak-portfolio-overlay"></div>
+        </div>
 
-        <!-- Static Title over Image -->
+        <!-- Static Title Below Image -->
         {%- if block.settings.title != blank -%}
           <h3 class="ak-portfolio-title">{{ block.settings.title }}</h3>
         {%- endif -%}
@@ -201,12 +188,12 @@
     },
     {
       "type": "header",
-      "content": "Overlay & Title Effects"
+      "content": "Image Overlay & Title Styling"
     },
     {
       "type": "color",
       "id": "overlay_color",
-      "label": "Image Overlay Color",
+      "label": "Static Image Overlay Color",
       "default": "#000000"
     },
     {
@@ -217,25 +204,14 @@
       "max": 100,
       "step": 5,
       "unit": "%",
-      "default": 0,
-      "info": "Set to 0% if you only want the overlay to appear on hover."
-    },
-    {
-      "type": "range",
-      "id": "overlay_opacity_hover",
-      "label": "Hover Overlay Opacity",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "default": 60,
-      "info": "Controls how dark the overlay gets when hovered."
+      "default": 10,
+      "info": "Sets a permanent color wash over the image. Set to 0% for no overlay."
     },
     {
       "type": "color",
       "id": "title_color",
-      "label": "Static Title Color",
-      "default": "#ffffff"
+      "label": "Title Color (Below Image)",
+      "default": "#121212"
     },
     {
       "type": "range",
@@ -245,7 +221,7 @@
       "max": 40,
       "step": 1,
       "unit": "px",
-      "default": 24
+      "default": 20
     },
     {
       "type": "range",
@@ -255,7 +231,7 @@
       "max": 30,
       "step": 1,
       "unit": "px",
-      "default": 18
+      "default": 16
     },
     {
       "type": "header",
@@ -365,12 +341,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Background Image"
+          "label": "Grid Image"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Overlay Title",
+          "label": "Title",
           "default": "Project Title"
         },
         {
