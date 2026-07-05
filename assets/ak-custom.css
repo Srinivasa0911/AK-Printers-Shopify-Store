@@ -312,3 +312,8 @@ animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 50% { transform: scale(1.04); }
 100% { transform: scale(1); }
 }
+
+/** Contact Us */
+div#Banner-template--22051286286595__image_banner_WQMKid p{
+color:rgba(var(--color-foreground),1)!imporrtant;
+}
