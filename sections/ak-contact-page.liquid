@@ -9,17 +9,15 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
   }
 
-  /* Left Side: Contact Info */
-  .ak-contact-info {
-    flex: 1;
+  /* Centered Header Section */
+  .ak-contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
   }
 
-  .ak-contact-info h2 {
+  .ak-contact-header h2 {
     font-size: clamp(2rem, 4vw, 3rem);
     color: {{ section.settings.heading_color }};
     margin-top: 0;
@@ -27,66 +25,69 @@
     font-weight: 600;
   }
 
-  .ak-contact-info p.ak-contact-desc {
+  .ak-contact-header p.ak-contact-desc {
     font-size: 1.1rem;
     color: #555555;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .ak-contact-details {
+  /* Three Column Grid Setup */
+  .ak-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 2rem;
+  }
+
+  .ak-contact-item {
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    transition: transform 0.3s ease;
   }
 
-  .ak-contact-detail-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+  .ak-contact-item:hover {
+    transform: translateY(-5px);
   }
 
   .ak-contact-icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     fill: {{ section.settings.icon_color }};
-    flex-shrink: 0;
-    margin-top: 4px;
+    margin-bottom: 1.5rem;
   }
 
-  .ak-contact-text h4 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1.1rem;
+  .ak-contact-item h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
     color: #121212;
+    font-weight: 600;
   }
 
-  .ak-contact-text p, .ak-contact-text a {
+  .ak-contact-item p, 
+  .ak-contact-item a {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #555555;
     text-decoration: none;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  .ak-contact-text a:hover {
+  .ak-contact-item a:hover {
     color: {{ section.settings.icon_color }};
   }
 
-  /* Right Side: Clean Empty Space */
-  .ak-contact-right-column {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  /* Desktop Layout */
+  /* Desktop Layout: 3 Columns */
   @media screen and (min-width: 750px) {
-    .ak-contact-container {
-      flex-direction: row;
-      align-items: flex-start;
+    .ak-contact-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
     }
   }
 {%- endstyle -%}
@@ -94,55 +95,41 @@
 <div class="section-{{ section.id }} ak-contact-section">
   <div class="ak-contact-container">
     
-    <!-- Left Side: Information -->
-    <div class="ak-contact-info">
+    <!-- Top Heading & Description -->
+    <div class="ak-contact-header">
       <h2>{{ section.settings.heading }}</h2>
-      <p class="ak-contact-desc">{{ section.settings.description }}</p>
-
-      <div class="ak-contact-details">
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'address' or block.type == 'phone' or block.type == 'email' -%}
-            <div class="ak-contact-detail-item" {{ block.shopify_attributes }}>
-              
-              <!-- SVG Icons based on block type -->
-              <svg class="ak-contact-icon" viewBox="0 0 24 24">
-                {%- if block.type == 'address' -%}
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-1.12 2.5-2.5-1.12 2.5-2.5 2.5z"/>
-                {%- elsif block.type == 'phone' -%}
-                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
-                {%- elsif block.type == 'email' -%}
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                {%- endif -%}
-              </svg>
-
-              <div class="ak-contact-text">
-                <h4>{{ block.settings.title }}</h4>
-                {%- if block.type == 'email' -%}
-                  <a href="mailto:{{ block.settings.text }}">{{ block.settings.text }}</a>
-                {%- elsif block.type == 'phone' -%}
-                  <a href="tel:{{ block.settings.text | remove: ' ' | remove: '-' }}">{{ block.settings.text }}</a>
-                {%- else -%}
-                  <p>{{ block.settings.text | newline_to_br }}</p>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
+      {%- if section.settings.description != blank -%}
+        <p class="ak-contact-desc">{{ section.settings.description }}</p>
+      {%- endif -%}
     </div>
 
-    <!-- Right Side: Clean Empty Space for Form -->
-    <div class="ak-contact-right-column">
+    <!-- 3-Column Info Row -->
+    <div class="ak-contact-grid">
       {%- for block in section.blocks -%}
-        {%- if block.type == 'custom_liquid' -%}
-          <div {{ block.shopify_attributes }}>
-            {{ block.settings.custom_code }}
-          </div>
-        {%- elsif block.type == '@app' -%}
-          <div {{ block.shopify_attributes }}>
-            {% render block %}
-          </div>
-        {%- endif -%}
+        <div class="ak-contact-item" {{ block.shopify_attributes }}>
+          
+          <!-- SVG Icons -->
+          <svg class="ak-contact-icon" viewBox="0 0 24 24">
+            {%- if block.type == 'address' -%}
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-1.12 2.5-2.5-1.12 2.5-2.5 2.5z"/>
+            {%- elsif block.type == 'phone' -%}
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            {%- elsif block.type == 'email' -%}
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            {%- endif -%}
+          </svg>
+
+          <!-- Text Details -->
+          <h4>{{ block.settings.title }}</h4>
+          {%- if block.type == 'email' -%}
+            <a href="mailto:{{ block.settings.text }}">{{ block.settings.text }}</a>
+          {%- elsif block.type == 'phone' -%}
+            <a href="tel:{{ block.settings.text | remove: ' ' | remove: '-' }}">{{ block.settings.text }}</a>
+          {%- else -%}
+            <p>{{ block.settings.text | newline_to_br }}</p>
+          {%- endif -%}
+
+        </div>
       {%- endfor -%}
     </div>
 
@@ -151,7 +138,7 @@
 
 {% schema %}
 {
-  "name": "AK Contact Section",
+  "name": "AK Contact Row",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -163,7 +150,7 @@
     },
     {
       "type": "header",
-      "content": "Left Column: Text"
+      "content": "Section Header"
     },
     {
       "type": "text",
@@ -181,13 +168,13 @@
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Have a project in mind or need a quote for custom packaging? Fill out the form and our team will get back to you within 24 hours."
+      "default": "We would love to hear from you. Reach out to us using any of the methods below."
     },
     {
       "type": "color",
       "id": "icon_color",
-      "label": "Icon Color",
-      "default": "#000000"
+      "label": "Card Icon & Hover Color",
+      "default": "#121212"
     },
     {
       "type": "header",
@@ -217,7 +204,7 @@
   "blocks": [
     {
       "type": "address",
-      "name": "Address",
+      "name": "Address Card",
       "limit": 1,
       "settings": [
         {
@@ -230,14 +217,14 @@
           "type": "textarea",
           "id": "text",
           "label": "Address Details",
-          "default": "123 Packaging Lane\nRamapuram, Chennai 600089"
+          "default": "123 Packaging Lane\nRamapuram, Chennai"
         }
       ]
     },
     {
       "type": "phone",
-      "name": "Phone Number",
-      "limit": 2,
+      "name": "Phone Card",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -255,8 +242,8 @@
     },
     {
       "type": "email",
-      "name": "Email Address",
-      "limit": 2,
+      "name": "Email Card",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -271,27 +258,11 @@
           "default": "hello@akprinters.net"
         }
       ]
-    },
-    {
-      "type": "custom_liquid",
-      "name": "Custom Form / Code",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "liquid",
-          "id": "custom_code",
-          "label": "Inbuilt Form Code",
-          "info": "Paste your form liquid snippet or HTML code here. It will display in the right column."
-        }
-      ]
-    },
-    {
-      "type": "@app"
     }
   ],
   "presets": [
     {
-      "name": "AK Contact Section",
+      "name": "AK Contact Row",
       "blocks": [
         { "type": "address" },
         { "type": "phone" },
