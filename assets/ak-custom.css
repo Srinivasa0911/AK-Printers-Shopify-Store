@@ -285,6 +285,6 @@ align-items: center;
 
 /** About Us Page CSS */
 
-#shopify-section-template--22051286352131__ak_image_banner_Np8z8Q h2.banner__heading.inline-richtext.h1{
-margin-bottom:-50px!important;
+#shopify-section-template--22555924988163__image_banner_EqKjWJ .banner__text.rte.subtitle{
+color:rgba(var(--color-foreground),1)!important
 }
