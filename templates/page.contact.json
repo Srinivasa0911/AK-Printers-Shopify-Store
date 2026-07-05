@@ -86,7 +86,7 @@
       ],
       "name": "AK Contact Row",
       "settings": {
-        "bg_color": "#F7F7F7",
+        "bg_color": "#F5F9F9",
         "heading": "Get in Touch",
         "heading_color": "#121212",
         "heading_size_desktop": 40,
@@ -112,7 +112,7 @@
       "settings": {
         "heading": "Contact Us",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 80,
         "padding_bottom": 80
       }
