@@ -143,6 +143,7 @@
         "column_HkUGna": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/usp.webp",
             "title": "OUR USP",
             "text": "<p>Premium design, unmatched quality, and on-time delivery-packaging that makes a statement.</p>",
             "link_label": "",
