@@ -53,10 +53,74 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "ak_portfolio_grid_WQHQ9q": {
+      "type": "ak-portfolio-grid",
+      "blocks": {
+        "portfolio_item_wxtTeL": {
+          "type": "portfolio_item",
+          "settings": {
+            "title": "Premium Rigid Boxes",
+            "link": ""
+          }
+        },
+        "portfolio_item_TaDpBC": {
+          "type": "portfolio_item",
+          "settings": {
+            "title": "Cosmetic Packaging",
+            "link": ""
+          }
+        },
+        "portfolio_item_gjUbCB": {
+          "type": "portfolio_item",
+          "settings": {
+            "title": "Wedding Hampers",
+            "link": ""
+          }
+        },
+        "portfolio_item_DLVDja": {
+          "type": "portfolio_item",
+          "settings": {
+            "title": "Corporate Kits",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "portfolio_item_wxtTeL",
+        "portfolio_item_TaDpBC",
+        "portfolio_item_gjUbCB",
+        "portfolio_item_DLVDja"
+      ],
+      "name": "AK Portfolio Grid",
+      "settings": {
+        "bg_color": "#ffffff",
+        "heading": "Our Projects",
+        "heading_color": "#121212",
+        "heading_size_desktop": 36,
+        "heading_size_mobile": 28,
+        "text_alignment": "center",
+        "overlay_color": "#DF1818",
+        "overlay_opacity": 40,
+        "overlay_opacity_hover": 60,
+        "title_color": "#551111",
+        "title_size_desktop": 24,
+        "title_size_mobile": 18,
+        "max_width": 1400,
+        "image_ratio": "4 / 3",
+        "border_radius": 8,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "gap_desktop": 20,
+        "gap_mobile": 16,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
     "main",
-    "image_banner_tpGK8q"
+    "image_banner_tpGK8q",
+    "ak_portfolio_grid_WQHQ9q"
   ]
 }
