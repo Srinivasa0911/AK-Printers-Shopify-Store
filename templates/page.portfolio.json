@@ -54,32 +54,32 @@
         "show_text_below": false
       }
     },
-    "ak_portfolio_grid_WQHQ9q": {
+    "ak_portfolio_grid_mKTMUm": {
       "type": "ak-portfolio-grid",
       "blocks": {
-        "portfolio_item_wxtTeL": {
+        "portfolio_item_WdWQdC": {
           "type": "portfolio_item",
           "settings": {
-            "image": "shopify://shop_images/forest-hiker.jpg",
+            "image": "shopify://shop_images/casual-fashion-woman_925x_56b56608-f207-45c1-b677-bb5aa26c1c7a.jpg",
             "title": "Premium Rigid Boxes",
             "link": ""
           }
         },
-        "portfolio_item_TaDpBC": {
+        "portfolio_item_tynWfz": {
           "type": "portfolio_item",
           "settings": {
             "title": "Cosmetic Packaging",
             "link": ""
           }
         },
-        "portfolio_item_gjUbCB": {
+        "portfolio_item_94AAXk": {
           "type": "portfolio_item",
           "settings": {
             "title": "Wedding Hampers",
             "link": ""
           }
         },
-        "portfolio_item_DLVDja": {
+        "portfolio_item_PbCNiq": {
           "type": "portfolio_item",
           "settings": {
             "title": "Corporate Kits",
@@ -88,10 +88,10 @@
         }
       },
       "block_order": [
-        "portfolio_item_wxtTeL",
-        "portfolio_item_TaDpBC",
-        "portfolio_item_gjUbCB",
-        "portfolio_item_DLVDja"
+        "portfolio_item_WdWQdC",
+        "portfolio_item_tynWfz",
+        "portfolio_item_94AAXk",
+        "portfolio_item_PbCNiq"
       ],
       "name": "AK Portfolio Grid",
       "settings": {
@@ -101,9 +101,9 @@
         "heading_size_desktop": 36,
         "heading_size_mobile": 28,
         "text_alignment": "center",
-        "title_color": "#000000",
-        "title_size_desktop": 24,
-        "title_size_mobile": 18,
+        "title_color": "#121212",
+        "title_size_desktop": 20,
+        "title_size_mobile": 16,
         "max_width": 1400,
         "image_ratio": "4 / 3",
         "border_radius": 8,
@@ -119,6 +119,6 @@
   "order": [
     "main",
     "image_banner_tpGK8q",
-    "ak_portfolio_grid_WQHQ9q"
+    "ak_portfolio_grid_mKTMUm"
   ]
 }
