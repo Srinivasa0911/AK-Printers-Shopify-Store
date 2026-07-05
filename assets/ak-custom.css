@@ -297,3 +297,20 @@ height:auto!important;
 ul#Slider-template--22555924988163__multicolumn_QTagt6 .media.media--transparent.media--adapt{
 padding-bottom:80px!important;
 }
+
+/** Whatsapp Button Animate */
+
+.wsp-whatsapp{
+animation:pulse 1.5s infinite;
+box-shadow:0 0 0 0 #42db87;
+-webkit-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+-moz-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+-ms-animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+animation:pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.04); }
+100% { transform: scale(1); }
+}
