@@ -433,104 +433,6 @@
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40
       }
-    },
-    "collection_list_CYmgFw": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_xUgFJz": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_e7GFMb": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_EBLrwi": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_bFqrwX": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_EhgnU3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_D7kPzf": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        },
-        "featured_collection_p4NFbx": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "frontpage"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_xUgFJz",
-        "featured_collection_e7GFMb",
-        "featured_collection_EBLrwi",
-        "featured_collection_bFqrwX",
-        "featured_collection_EhgnU3",
-        "featured_collection_D7kPzf",
-        "featured_collection_p4NFbx"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": true,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "product_showcase_grid_UQ4JNm": {
-      "type": "product-showcase-grid",
-      "name": "Featured Products Grid",
-      "settings": {
-        "fp-title": "Featured Collection",
-        "fp-source-type": "products",
-        "fp-collection": "",
-        "fp-product-list": [
-          "classic-varsity-top",
-          "classic-leather-jacket",
-          "chequered-red-shirt",
-          "blue-silk-tuxedo"
-        ],
-        "fp-products-to-show": 4,
-        "fp-columns-desktop": "4",
-        "fp-show-secondary-image": true,
-        "fp-show-vendor": true,
-        "fp-show-collection-name": true,
-        "fp-show-card-thumbnails": true,
-        "fp-shop-button-bg-color": "#ffffff",
-        "fp-shop-button-text-color": "#000000",
-        "fp-shop-button-bg-hover-color": "#000000",
-        "fp-shop-button-text-hover-color": "#ffffff",
-        "fp-all-products-button-bg-color": "#f5f5f5",
-        "fp-all-products-button-text-color": "#000000",
-        "fp-all-products-button-bg-hover-color": "#e0e0e0",
-        "fp-all-products-button-text-hover-color": "#000000"
-      }
     }
   },
   "order": [
@@ -540,8 +442,6 @@
     "image_with_text_he3pfR",
     "featured_collection",
     "logo_slider_ak_iAPpKC",
-    "counter_section_ak_wbgcep",
-    "collection_list_CYmgFw",
-    "product_showcase_grid_UQ4JNm"
+    "counter_section_ak_wbgcep"
   ]
 }
